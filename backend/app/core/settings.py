@@ -1,6 +1,7 @@
 from functools import lru_cache
 from typing import Literal
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -14,6 +15,21 @@ class Settings(BaseSettings):
     # SQLite locally (zero install); Postgres in production. Access code is
     # dialect-portable, so only this string changes between the two.
     database_url: str = "sqlite+aiosqlite:///./resq.db"
+
+    @field_validator("database_url", mode="before")
+    @classmethod
+    def sanitize_database_url(cls, v: str) -> str:
+        if not isinstance(v, str):
+            return v
+        # Ensure asyncpg driver for postgresql
+        if v.startswith("postgres://"):
+            v = "postgresql+asyncpg://" + v[len("postgres://"):]
+        elif v.startswith("postgresql://"):
+            v = "postgresql+asyncpg://" + v[len("postgresql://"):]
+        # asyncpg requires ssl= instead of sslmode=
+        v = v.replace("sslmode=", "ssl=")
+        v = v.replace("&channel_binding=require", "").replace("?channel_binding=require", "?").rstrip("?")
+        return v
 
     ai_provider: Literal["mock", "gemini"] = "mock"
     gemini_api_key: str = ""
