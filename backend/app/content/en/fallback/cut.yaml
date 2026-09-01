@@ -1,0 +1,102 @@
+default:
+  risk_level: URGENT
+  summary: >-
+    Press firmly on the wound to stop the bleeding, then clean and cover it. A
+    deep or dirty wound should be seen by a doctor.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Press on the wound
+      instruction: >-
+        Press firmly on the wound with a clean cloth or pad and hold it there
+        for at least 10 minutes without lifting it to check.
+    - step: 2
+      title: Raise the injured part
+      instruction: >-
+        If it is an arm or leg, raise it above the level of the heart while you
+        keep pressing.
+    - step: 3
+      title: Clean it once bleeding stops
+      instruction: >-
+        Rinse the wound under clean running water. Do not scrub it.
+    - step: 4
+      title: Cover the wound
+      instruction: >-
+        Cover with a clean dressing or bandage. Change it if it becomes wet or
+        dirty.
+    - step: 5
+      title: Check if a doctor is needed
+      instruction: >-
+        See a doctor if the wound is deep or gaping, was caused by something
+        rusty or dirty, or if the last tetanus injection was over 5 years ago.
+  do_not:
+    - Do not remove the pad to check the wound while it is still bleeding.
+    - Do not pull out anything embedded in the wound.
+    - Do not apply ash, turmeric, or any powder to the wound.
+    - Do not tie anything tightly around a limb to stop bleeding.
+  monitor:
+    - Bleeding soaking through the dressing
+    - The person becoming pale, cold, drowsy, or sweaty
+    - Increasing redness, swelling, pus, or fever over the next days
+  medical_follow_up:
+    required: true
+    reason: >-
+      Deep wounds may need stitches, cleaning, or a tetanus injection that only
+      a clinic can provide.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    Heavy bleeding needs emergency help now. Call 112 or 108 and keep pressing
+    hard on the wound until help arrives.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately and put the phone on speaker so both hands
+        stay free.
+    - step: 2
+      title: Press hard and do not stop
+      instruction: >-
+        Press down hard on the wound with a cloth, clean pad, or your hand.
+        Keep pressing continuously until help arrives.
+    - step: 3
+      title: Add more padding on top
+      instruction: >-
+        If blood soaks through, add another pad on top and keep pressing. Do
+        not remove the first one.
+    - step: 4
+      title: Lay them down and raise the limb
+      instruction: >-
+        Help them lie flat. If the wound is on an arm or leg, raise that limb
+        while you keep pressing.
+    - step: 5
+      title: Keep them warm and still
+      instruction: >-
+        Cover them with a blanket or coat and keep talking to them until the
+        ambulance arrives.
+  do_not:
+    - Do not remove the pad to look at the wound.
+    - Do not pull out anything embedded in the wound.
+    - Do not give anything to eat or drink.
+    - Do not let them get up or walk around.
+  monitor:
+    - Whether they stay awake and can answer you
+    - Breathing becoming fast or shallow
+    - Skin turning pale, grey, cold, or clammy
+  medical_follow_up:
+    required: true
+    reason: >-
+      Blood loss of this level needs hospital assessment and possibly surgery
+      or a transfusion.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

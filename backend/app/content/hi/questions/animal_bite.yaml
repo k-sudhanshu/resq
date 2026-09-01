@@ -1,0 +1,34 @@
+questions:
+  - id: animal_wound
+    text: घाव कितना गहरा है?
+    options:
+      - id: scratch_or_graze
+        text: खरोंच या रगड़ है, त्वचा हल्की सी कटी है
+      - id: deep_or_bleeding
+        text: गहरा घाव है, या दबाने पर भी खून नहीं रुक रहा
+        escalates_to: URGENT
+      - id: torn_or_many
+        text: मांस फटा है, या कई जगह घाव हैं
+        escalates_to: CRITICAL
+  - id: animal_location
+    text: काटा कहां है?
+    options:
+      - id: arm_or_leg
+        text: बांह या पैर पर
+      - id: hand_or_finger
+        text: हाथ या उंगलियों पर
+        escalates_to: URGENT
+      - id: head_face_neck
+        text: सिर, चेहरे, या गर्दन पर
+        escalates_to: URGENT
+  - id: animal_type
+    text: किस जानवर ने काटा?
+    options:
+      - id: vaccinated_pet
+        text: पालतू कुत्ता या बिल्ली, जिसका रेबीज़ का टीका लगा हुआ है
+      - id: stray_or_unknown
+        text: आवारा या अनजान कुत्ता, बिल्ली, या बंदर
+        escalates_to: URGENT
+      - id: wild_or_strange
+        text: जंगली जानवर, या अजीब बर्ताव करता हुआ जानवर
+        escalates_to: URGENT

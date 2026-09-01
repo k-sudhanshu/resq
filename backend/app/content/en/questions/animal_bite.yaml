@@ -1,0 +1,34 @@
+questions:
+  - id: animal_wound
+    text: How bad is the wound?
+    options:
+      - id: scratch_or_graze
+        text: A scratch or graze, skin barely broken
+      - id: deep_or_bleeding
+        text: A deep wound, or bleeding that does not stop with pressure
+        escalates_to: URGENT
+      - id: torn_or_many
+        text: Flesh torn, or many wounds
+        escalates_to: CRITICAL
+  - id: animal_location
+    text: Where is the bite?
+    options:
+      - id: arm_or_leg
+        text: Arm or leg
+      - id: hand_or_finger
+        text: Hand or fingers
+        escalates_to: URGENT
+      - id: head_face_neck
+        text: Head, face, or neck
+        escalates_to: URGENT
+  - id: animal_type
+    text: Which animal was it?
+    options:
+      - id: vaccinated_pet
+        text: A pet dog or cat with up-to-date rabies vaccination
+      - id: stray_or_unknown
+        text: A stray or unknown dog, cat, or monkey
+        escalates_to: URGENT
+      - id: wild_or_strange
+        text: A wild animal, or an animal behaving strangely
+        escalates_to: URGENT

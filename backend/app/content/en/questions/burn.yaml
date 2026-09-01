@@ -1,0 +1,45 @@
+questions:
+  - id: burn_breathing
+    text: Is the person having trouble breathing, or did they breathe in smoke?
+    options:
+      - id: breathing_normal
+        text: Breathing normally
+      - id: breathing_difficult
+        text: Struggling to breathe, coughing badly, or hoarse voice
+        escalates_to: CRITICAL
+  - id: burn_location
+    text: Where is the burn?
+    options:
+      - id: arm_or_leg
+        text: Arm or leg
+      - id: hand_or_joint
+        text: Hand, foot, or a joint
+        escalates_to: URGENT
+      - id: face_or_neck
+        text: Face, neck, or mouth
+        escalates_to: CRITICAL
+      - id: chest_or_back
+        text: Chest, back, or stomach
+        escalates_to: URGENT
+  - id: burn_size
+    text: How large is the burnt area?
+    options:
+      - id: smaller_than_palm
+        text: Smaller than the person's palm
+      - id: about_palm
+        text: About the size of their palm
+        escalates_to: URGENT
+      - id: larger_than_palm
+        text: Larger than their palm
+        escalates_to: URGENT
+  - id: burn_appearance
+    text: What does the burn look like?
+    options:
+      - id: red_and_painful
+        text: Red and painful, skin not broken
+      - id: blistered
+        text: Blisters have formed
+        escalates_to: URGENT
+      - id: white_or_charred
+        text: White, leathery, or black and charred
+        escalates_to: CRITICAL

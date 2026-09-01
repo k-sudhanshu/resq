@@ -1,0 +1,105 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    First make sure the power is off before touching the person. Even after a
+    small household shock, a doctor should check them — electricity can hurt
+    the heart without leaving marks outside.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Cut the power first
+      instruction: >-
+        Switch off the mains or unplug the appliance before touching the
+        person. If you cannot, push them away from the source with dry wood,
+        plastic, or cloth — never with bare hands.
+    - step: 2
+      title: Check how they are
+      instruction: >-
+        Once safe, check that they are awake and breathing normally. Ask them
+        to sit down and rest.
+    - step: 3
+      title: Cool any burn
+      instruction: >-
+        If there is a burn mark, cool it under running water for 20 minutes
+        and cover it loosely with a clean cloth.
+    - step: 4
+      title: Get them checked
+      instruction: >-
+        Take them to a doctor even if they feel fine — electric current can
+        affect the heartbeat hours later.
+  do_not:
+    - Do not touch the person until the power source is switched off.
+    - Do not put ointments, ghee, or toothpaste on electrical burns.
+    - Do not assume they are fine just because there is no visible mark.
+  monitor:
+    - Irregular or racing heartbeat, or chest pain
+    - Dizziness, confusion, or weakness
+    - Burn areas becoming more painful or swollen
+  medical_follow_up:
+    required: true
+    reason: >-
+      Electric current can injure the heart and deeper tissues invisibly, so
+      a medical check is needed after any real shock.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    This is an electrical emergency. Do not touch the person until the power
+    is off. Call 112 or 108 now — high-voltage and lightning injuries, or an
+    unresponsive person, need emergency care immediately.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Do not touch — cut the power
+      instruction: >-
+        For household current, switch off the mains. For a power line or
+        transformer, stay at least 18 metres (60 feet) away and call the
+        electricity board — only they can make it safe.
+    - step: 2
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately and say it is an electric shock. Put the
+        phone on speaker.
+    - step: 3
+      title: Check breathing once safe
+      instruction: >-
+        Only after the power is off: if the person is not breathing normally,
+        start chest compressions in the centre of the chest, hard and fast,
+        and continue until help arrives.
+    - step: 4
+      title: Position them safely
+      instruction: >-
+        If they are breathing but unresponsive, roll them gently onto their
+        side. Cover them to keep them warm.
+    - step: 5
+      title: Cool burns while waiting
+      instruction: >-
+        If they are awake, cool any burns with running water and cover
+        loosely. Stay with them until the ambulance arrives.
+  do_not:
+    - Do not touch the person while they may still be connected to power.
+    - Do not go near a fallen power line, even to help.
+    - Do not give anything to eat or drink.
+    - Do not leave the person alone, even if they seem to recover.
+  monitor:
+    - Breathing, and whether it stays regular
+    - Whether they stay awake and responsive
+    - Heartbeat feeling irregular, too fast, or too slow
+  medical_follow_up:
+    required: true
+    reason: >-
+      High-voltage shock and lightning can cause heart rhythm problems and
+      deep burns that only a hospital can treat.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

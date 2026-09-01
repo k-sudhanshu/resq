@@ -1,0 +1,88 @@
+default:
+  risk_level: URGENT
+  summary: >-
+    Do not rub the eye. Rinse with clean water if something loose is in it.
+    Chemicals, a stuck object, or lost vision need emergency care.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Do not rub
+      instruction: >-
+        Ask them not to rub. Rubbing can scratch the eye.
+    - step: 2
+      title: Rinse a loose speck
+      instruction: >-
+        Tilt the head so the injured eye is down. Pour clean water from the
+        inner corner outward for several minutes.
+    - step: 3
+      title: Cover loosely
+      instruction: >-
+        If rinsing does not help, cover the eye loosely with a clean cup or
+        gauze — do not press.
+    - step: 4
+      title: See a doctor today
+      instruction: >-
+        Get the eye checked the same day if pain, redness, or blur continues.
+  do_not:
+    - Do not try to pull out something stuck in the eyeball.
+    - Do not put oil, milk, or leftover eye drops in the eye.
+    - Do not use a dirty cloth to wipe the eye.
+  monitor:
+    - Vision getting worse
+    - Increasing pain or light hurting the eye
+    - Blood in the eye
+  medical_follow_up:
+    required: true
+    reason: >-
+      An eye injury can look mild and still threaten sight. A same-day check
+      is safest.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    Chemical in the eye, a stuck object, or sudden loss of vision is an
+    emergency. Rinse chemicals now and call 112 or 108.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Chemical — rinse now, then call
+      instruction: >-
+        Hold the eye open and pour clean water for at least 15 minutes from
+        the inner corner out, so it does not run into the other eye. Then
+        call 112 or 108.
+    - step: 2
+      title: Stuck object — do not pull
+      instruction: >-
+        Leave it in place. Cover both eyes loosely so the injured eye does
+        not move. Call for help.
+    - step: 3
+      title: Cut or collapsed eye
+      instruction: >-
+        Do not rinse hard. Cover loosely and get to hospital at once.
+    - step: 4
+      title: Keep them still
+      instruction: >-
+        Sit them upright, head still. Do not let them squeeze the eye shut
+        tightly.
+  do_not:
+    - Do not neutralize acid or alkali with another chemical.
+    - Do not press on the eyeball.
+    - Do not remove a penetrating object.
+  monitor:
+    - Vision
+    - Severe pain
+    - Nausea after a blow to the eye
+  medical_follow_up:
+    required: true
+    reason: >-
+      Chemicals and penetrating injuries can destroy the eye within hours.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

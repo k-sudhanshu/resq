@@ -1,0 +1,108 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Treat every snake bite as serious. Keep the person still, keep the bitten
+    limb below heart level, and get to a hospital with anti-venom as fast as
+    you can — even if the bite looks small.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Keep the person calm and still
+      instruction: >-
+        Make them sit or lie down and stay as still as possible. Movement
+        spreads venom faster through the body.
+    - step: 2
+      title: Keep the bitten limb low and still
+      instruction: >-
+        Keep the bitten arm or leg below the level of the heart. Support it
+        like a broken limb — a rough splint with a cloth and a stick works.
+    - step: 3
+      title: Remove tight items
+      instruction: >-
+        Take off rings, bangles, watches, and tight clothing near the bite
+        before swelling starts.
+    - step: 4
+      title: Go to a hospital now
+      instruction: >-
+        Take the person to the nearest hospital that stocks anti-venom.
+        Call 108 for an ambulance if you have no safe transport.
+    - step: 5
+      title: Note the time and the snake's look
+      instruction: >-
+        Remember the bite time and the snake's colour and size if you saw it.
+        Do not chase or try to catch the snake.
+  do_not:
+    - Do not cut the wound, suck the venom, or apply a tight rope or tourniquet.
+    - Do not apply ice, herbs, potions, or a stone to the bite.
+    - Do not give alcohol, tea, coffee, or any medicine by mouth.
+    - Do not waste time on home remedies or a traditional healer — go to hospital.
+  monitor:
+    - Swelling spreading up the limb, or the skin turning dark
+    - Drooping eyelids, blurred vision, or difficulty speaking or swallowing
+    - Vomiting, drowsiness, or bleeding from the gums or the bite
+  medical_follow_up:
+    required: true
+    reason: >-
+      Only a hospital can judge whether anti-venom is needed. Symptoms can
+      start hours after the bite, so a doctor must observe the person.
+  sources:
+    - who_snakebite
+    - nhs_first_aid
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    These are signs of venom spreading. Call 112 or 108 now and get the person
+    to a hospital with anti-venom immediately. Keep them still and lying on
+    their side.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately and say it is a snake bite. Put the phone
+        on speaker so your hands stay free.
+    - step: 2
+      title: Lie them on their side
+      instruction: >-
+        If the person is drowsy or vomiting, lie them on their left side so
+        the airway stays clear. Do not leave them alone.
+    - step: 3
+      title: Keep the limb still and low
+      instruction: >-
+        Keep the bitten limb below heart level and completely still. Splint it
+        with any straight object and a cloth if possible.
+    - step: 4
+      title: Remove tight items
+      instruction: >-
+        Remove rings, bangles, and tight clothing near the bite before the
+        swelling gets worse.
+    - step: 5
+      title: Watch their breathing
+      instruction: >-
+        Stay with the person and watch their breathing until help arrives. If
+        breathing stops, start chest compressions if you know how.
+  do_not:
+    - Do not cut the wound, suck the venom, or tie a rope or tourniquet.
+    - Do not give anything to eat or drink.
+    - Do not let the person walk, even if they say they can.
+    - Do not wait for symptoms to improve before going to hospital.
+  monitor:
+    - Breathing and whether they can still speak
+    - Whether they stay awake and responsive
+    - New bleeding from the gums, nose, or the bite wound
+  medical_follow_up:
+    required: true
+    reason: >-
+      Venomous bites need anti-venom and hospital monitoring. Delay can be
+      life-threatening.
+  sources:
+    - who_snakebite
+    - nhs_first_aid

@@ -1,0 +1,91 @@
+default:
+  risk_level: URGENT
+  summary: >-
+    Give ORS or clean water in small, frequent sips. A baby, an elderly
+    person, or someone who cannot keep fluids down needs a clinic the same
+    day.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Start ORS
+      instruction: >-
+        Mix ORS as the packet says, or give clean water if ORS is not there.
+        Offer a sip every few minutes — do not make them gulp a glass.
+    - step: 2
+      title: Keep offering
+      instruction: >-
+        Continue for several hours. If they vomit, wait 10 minutes and start
+        small sips again.
+    - step: 3
+      title: Rest in the shade
+      instruction: >-
+        Keep them cool and still. For a baby, continue breast milk as well
+        as ORS.
+    - step: 4
+      title: Get medical help
+      instruction: >-
+        Go to a clinic if urine is very little, eyes look sunken, or they
+        cannot keep fluids down.
+  do_not:
+    - Do not give only fizzy drinks or strong tea.
+    - Do not stop breastfeeding.
+    - Do not give medicines for diarrhoea unless a doctor says so.
+  monitor:
+    - How often they pass urine
+    - Drowsiness or cold hands
+    - Ongoing vomiting
+  medical_follow_up:
+    required: true
+    reason: >-
+      Severe dehydration needs IV fluids in a clinic. Home ORS is the first
+      step, not the last if signs worsen.
+  sources:
+    - mohfw_india
+    - nhs_first_aid
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    They are too weak to drink, very drowsy, or have not passed urine for
+    many hours. Call 112 or 108. Do not force fluids into the mouth.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 and say the person is dehydrated and cannot drink.
+    - step: 2
+      title: Do not force drinks
+      instruction: >-
+        If they are drowsy, do not pour water into the mouth — they can
+        choke.
+    - step: 3
+      title: Cool and lie down
+      instruction: >-
+        Lie them in the shade, loosen clothes, and raise the legs if they
+        feel faint and are awake enough.
+    - step: 4
+      title: Sips only if fully awake
+      instruction: >-
+        If they become fully awake and can swallow, give tiny sips of ORS
+        while you wait.
+  do_not:
+    - Do not give a large amount of water at once.
+    - Do not give salt water you mixed by guess.
+    - Do not leave a baby or elderly person to “sleep it off”.
+  monitor:
+    - Responsiveness
+    - Breathing
+    - Whether any urine is passed
+  medical_follow_up:
+    required: true
+    reason: >-
+      Shock from fluid loss needs hospital fluids. Delay is dangerous in
+      babies and the elderly.
+  sources:
+    - mohfw_india
+    - nhs_first_aid

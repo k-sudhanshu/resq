@@ -1,0 +1,45 @@
+questions:
+  - id: cut_bleeding_control
+    text: What happens when you press firmly on the wound?
+    options:
+      - id: bleeding_stopped
+        text: Bleeding has stopped
+      - id: bleeding_slows
+        text: It slows down but keeps oozing
+        escalates_to: URGENT
+      - id: bleeding_uncontrolled
+        text: Blood keeps flowing heavily or spurts out
+        escalates_to: CRITICAL
+  - id: cut_responsiveness
+    text: How alert is the person?
+    options:
+      - id: fully_alert
+        text: Fully awake and talking normally
+      - id: drowsy_or_confused
+        text: Drowsy, confused, pale, or sweating
+        escalates_to: CRITICAL
+      - id: unresponsive
+        text: Not responding
+        escalates_to: CRITICAL
+  - id: cut_location
+    text: Where is the wound?
+    options:
+      - id: arm_or_leg
+        text: Arm or leg
+      - id: head_or_neck
+        text: Head or neck
+        escalates_to: URGENT
+      - id: chest_or_abdomen
+        text: Chest or stomach
+        escalates_to: CRITICAL
+  - id: cut_depth
+    text: How deep is the wound?
+    options:
+      - id: shallow_scrape
+        text: A shallow cut or scrape
+      - id: deep_or_gaping
+        text: Deep, or the edges are gaping open
+        escalates_to: URGENT
+      - id: object_embedded
+        text: Something is stuck in the wound
+        escalates_to: URGENT

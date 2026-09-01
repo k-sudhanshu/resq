@@ -1,0 +1,41 @@
+questions:
+  - id: eye_what
+    text: आंख के साथ क्या हुआ?
+    options:
+      - id: dust_or_object
+        text: धूल, कीड़ा, या कोई छोटी चीज़ घुस गई
+      - id: chemical
+        text: साबुन, तेज़ाब, कीटनाशक, या कोई रसायन
+        escalates_to: CRITICAL
+      - id: hit_or_cut
+        text: चोट, कट, या नुकीली चीज़
+        escalates_to: URGENT
+  - id: eye_vision
+    text: उस आंख से दिख रहा है?
+    options:
+      - id: sees_ok
+        text: दिखना लगभग ठीक है, बस पानी आ रहा है या दर्द है
+      - id: blurry
+        text: धुंधला, दोहरा, या काला धब्बा
+        escalates_to: URGENT
+      - id: cannot_see
+        text: दिख नहीं रहा, या आंख पिचकी/कटी लगती है
+        escalates_to: CRITICAL
+  - id: eye_stuck
+    text: क्या कोई चीज़ अभी भी आंख में फँसी है?
+    options:
+      - id: nothing_stuck
+        text: कुछ फँसा नहीं है
+      - id: small_loose
+        text: ढीली चीज़ है, धुल सकती है
+      - id: embedded
+        text: चीज़ आंख के गोले में धँसी हुई है
+        escalates_to: CRITICAL
+  - id: eye_both
+    text: क्या सिर्फ़ एक आंख प्रभावित है?
+    options:
+      - id: one_eye
+        text: एक आंख
+      - id: both_eyes
+        text: दोनों आंखें
+        escalates_to: URGENT

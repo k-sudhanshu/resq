@@ -1,0 +1,42 @@
+questions:
+  - id: fracture_location
+    text: चोट शरीर के किस हिस्से पर है?
+    options:
+      - id: arm_or_wrist
+        text: बांह, कलाई, या हाथ
+      - id: leg_or_ankle
+        text: पैर, टखना, या तलवा
+        escalates_to: URGENT
+      - id: hip_or_thigh
+        text: कूल्हा या जांघ
+        escalates_to: CRITICAL
+      - id: spine_neck_or_head
+        text: गर्दन, रीढ़, या सिर
+        escalates_to: CRITICAL
+  - id: fracture_bone_exposed
+    text: क्या हड्डी दिख रही है, या चोट वाली जगह पर खुला घाव है?
+    options:
+      - id: skin_intact
+        text: त्वचा कटी नहीं है
+      - id: open_wound
+        text: चोट के ऊपर खुला घाव है
+        escalates_to: URGENT
+      - id: bone_visible
+        text: हड्डी बाहर निकली हुई है
+        escalates_to: CRITICAL
+  - id: fracture_circulation
+    text: चोट के नीचे का हिस्सा ठंडा, नीला, या सुन्न है?
+    options:
+      - id: normal_warm_sensation
+        text: रंग सामान्य है, गरम है, और छूने का पता चलता है
+      - id: numb_or_cold
+        text: ठंडा, नीला, या सुन्न पड़ गया है
+        escalates_to: CRITICAL
+  - id: fracture_deformity
+    text: क्या चोट वाला हिस्सा मुड़ा हुआ या टेढ़ा लग रहा है?
+    options:
+      - id: looks_normal
+        text: दिखने में ठीक है — बस सूजन और दर्द है (जैसे मोच)
+      - id: visible_deformity
+        text: साफ़ तौर पर मुड़ा, ऐंठा, या टेढ़ा है
+        escalates_to: URGENT

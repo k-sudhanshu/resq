@@ -1,0 +1,90 @@
+default:
+  risk_level: URGENT
+  summary: >-
+    Keep them cool and give extra drinks. A baby under 3 months with fever,
+    a stiff neck, a purple rash, or a fit is an emergency.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Light clothes and a cool room
+      instruction: >-
+        Remove extra blankets and jackets. Keep the room airy. Do not wrap
+        them tightly.
+    - step: 2
+      title: Offer drinks often
+      instruction: >-
+        Give water, ORS, or breast milk often in small sips. Fever uses up
+        fluid.
+    - step: 3
+      title: Lukewarm sponge if very hot
+      instruction: >-
+        Wipe the face, neck, and limbs with a lukewarm (not ice-cold) cloth
+        if they are very hot and uncomfortable.
+    - step: 4
+      title: See a doctor
+      instruction: >-
+        Get medical advice the same day if the fever is high, lasts more
+        than 2–3 days, or the person is elderly or pregnant.
+  do_not:
+    - Do not use ice baths or alcohol rubs.
+    - Do not give aspirin to a child.
+    - Do not bundle them in many blankets to “sweat it out”.
+  monitor:
+    - Neck stiffness, purple rash, or a fit
+    - Difficulty drinking or waking
+    - Fast or hard breathing
+  medical_follow_up:
+    required: true
+    reason: >-
+      Fever can be malaria, dengue, or infection. A clinician should decide
+      tests and treatment.
+  sources:
+    - mohfw_india
+    - nhs_first_aid
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    A very young baby with fever, a fit, a stiff neck, or a purple rash needs
+    112 or 108 now. Keep the airway clear and do not give food.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108. Say the age and the danger sign (fit, rash, baby
+        under 3 months, or hard to wake).
+    - step: 2
+      title: If there is a fit
+      instruction: >-
+        Protect the head, turn them on their side when the jerking stops,
+        and do not put anything in the mouth.
+    - step: 3
+      title: Cool gently
+      instruction: >-
+        Remove extra clothes. Use a lukewarm cloth. Do not ice.
+    - step: 4
+      title: Offer sips only if fully awake
+      instruction: >-
+        If they are fully awake, offer sips of water. If drowsy, give nothing
+        by mouth.
+  do_not:
+    - Do not give aspirin to children.
+    - Do not put a spoon or fingers in the mouth during a fit.
+    - Do not wait for the fever to “break” if danger signs are present.
+  monitor:
+    - Another fit
+    - Breathing
+    - Whether they can be woken
+  medical_follow_up:
+    required: true
+    reason: >-
+      These signs can mean a serious infection. Hospital assessment is
+      needed at once.
+  sources:
+    - mohfw_india
+    - nhs_first_aid

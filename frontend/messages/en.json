@@ -1,0 +1,114 @@
+{
+  "common": {
+    "appName": "RESQ",
+    "loading": "Loading…",
+    "retry": "Try again",
+    "back": "Back",
+    "skip": "Skip",
+    "continue": "Continue",
+    "startOver": "Start over",
+    "languageName": "English",
+    "switchTo": "हिंदी में देखें"
+  },
+  "coldStart": {
+    "title": "Waking up the server…",
+    "body": "The free server sleeps when nobody is using it. This takes a few seconds the first time."
+  },
+  "consent": {
+    "title": "This is first-aid help, not a doctor",
+    "subtitle": "We will walk you through what to do, one step at a time.",
+    "emergencyTitle": "Life in danger? Call now",
+    "emergencyBody": "Do not wait on this app if they are unconscious or not breathing.",
+    "disclaimerTitle": "What this app does",
+    "disclaimerBody": "Clear steps you can do now. If you are unsure, call a doctor.",
+    "sourcesTitle": "Trusted sources",
+    "sourcesBody": "Steps are based on these organisations — not random internet advice.",
+    "sourceWho": "World Health Organization (WHO)",
+    "sourceNhs": "NHS — First aid",
+    "sourceIrcs": "Indian Red Cross Society",
+    "sourceMohfw": "Ministry of Health, India",
+    "accept": "I understand — continue",
+    "call112": "Call 112",
+    "call108": "Call 108"
+  },
+  "landing": {
+    "title": "What happened?",
+    "subtitle": "Choose what is closest to the situation.",
+    "searchPlaceholder": "burn, jalna, snake, सांप…",
+    "noResults": "No match. Use “Other problem” to describe it yourself.",
+    "otherLabel": "Other problem",
+    "otherLabelAlt": "कुछ और — type or speak",
+    "disclaimerShort": "First-aid guidance only. Call 112 or 108 in a life-threatening emergency."
+  },
+  "patient": {
+    "title": "How old is the injured person?",
+    "subtitle": "First-aid steps change with age — CPR, choking help, and medicine doses are different for babies, children, and the elderly.",
+    "baby": "Baby (under 1 year)",
+    "child": "Child (1–12 years)",
+    "adult": "Adult (13–60 years)",
+    "elderly": "Elderly (over 60 years)"
+  },
+  "assess": {
+    "progress": "Question {current} of {total}",
+    "imageTitle": "Add a photo (optional)",
+    "imageBody": "A photo can help assess the injury. It is analysed and never saved.",
+    "imageChoose": "Choose a photo",
+    "imageRemove": "Remove photo",
+    "imageTooLarge": "That photo is larger than 3 MB. Please choose a smaller one.",
+    "imageWrongType": "Please choose a JPG, PNG, or WebP photo.",
+    "submit": "Get first-aid steps",
+    "answerRequired": "Choose one option to continue."
+  },
+  "describe": {
+    "title": "Describe what happened",
+    "subtitle": "Type or speak in English or Hindi. A few words are enough.",
+    "placeholder": "For example: my brother burnt his hand on hot oil, blisters have formed",
+    "voiceStart": "Speak instead of typing",
+    "voiceStop": "Stop recording",
+    "voiceListening": "Listening… speak now",
+    "voiceUnsupported": "Voice input is not available in this browser. Please type instead.",
+    "voiceError": "Could not hear that. Please try again or type instead.",
+    "required": "Please describe what happened.",
+    "submit": "Get first-aid steps"
+  },
+  "analyzing": {
+    "title": "Working out what to do",
+    "checking": "Checking the answers you gave",
+    "consulting": "Preparing first-aid steps",
+    "verifying": "Running safety checks",
+    "reassure": "You are doing the right thing by getting help."
+  },
+  "result": {
+    "criticalBanner": "Emergency — call for help now",
+    "urgentBanner": "See a doctor as soon as possible",
+    "nonUrgentBanner": "You can manage this with first aid",
+    "call112": "Call 112",
+    "call108": "Call 108 (ambulance)",
+    "actionsTitle": "Do this now",
+    "doNotTitle": "Do not do this",
+    "monitorTitle": "Watch for these signs",
+    "followUpTitle": "Medical follow-up",
+    "followUpRequired": "A doctor should see this.",
+    "followUpNotRequired": "No doctor visit needed unless things change.",
+    "sourcesTitle": "Based on",
+    "videoTitle": "Watch how to do it",
+    "newAssessment": "Check something else",
+    "degradedTitle": "Showing verified basic steps",
+    "degradedBody": "AI guidance is unavailable right now, so these are the standard first-aid steps for this situation.",
+    "rulesTitle": "Emergency rules applied",
+    "rulesBody": "Your answers show signs of a life-threatening emergency, so these verified steps were shown immediately.",
+    "languageNotice": "This result was prepared in {language}.",
+    "reanalyze": "Get it again in English",
+    "notFound": "This result is no longer available. Sessions are deleted after 24 hours.",
+    "disclaimer": "General first-aid guidance. It does not replace examination by a doctor."
+  },
+  "errors": {
+    "VALIDATION_ERROR": "Something in that request was not valid. Please try again.",
+    "SESSION_INVALID": "Your session expired. Starting a new one.",
+    "RATE_LIMITED": "Too many requests. Please wait {seconds} seconds and try again.",
+    "IMAGE_REJECTED": "That photo could not be used. Try a different one, or continue without it.",
+    "NOT_FOUND": "We could not find that.",
+    "INTERNAL_ERROR": "Something went wrong on our side. Please try again.",
+    "NETWORK": "Could not reach the server. Check your connection and try again."
+  }
+}

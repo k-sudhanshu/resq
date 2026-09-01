@@ -1,0 +1,30 @@
+questions:
+  - id: drown_condition
+    text: How is the person right now?
+    options:
+      - id: awake_coughing
+        text: Awake and coughing the water out
+        escalates_to: URGENT
+      - id: breathing_unresponsive
+        text: Breathing, but not waking up
+        escalates_to: CRITICAL
+      - id: not_breathing
+        text: Not breathing, or only gasping
+        escalates_to: CRITICAL
+  - id: drown_out_of_water
+    text: Is the person out of the water?
+    options:
+      - id: out_on_land
+        text: Yes, on dry ground
+      - id: still_in_water
+        text: No, still in the water
+        escalates_to: CRITICAL
+  - id: drown_after
+    text: How do they seem after coming out?
+    options:
+      - id: talking_ok
+        text: Talking and breathing, seems okay
+        escalates_to: URGENT
+      - id: blue_lips_or_vomit
+        text: Blue lips, vomiting, or unusually sleepy
+        escalates_to: CRITICAL

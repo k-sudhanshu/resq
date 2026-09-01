@@ -1,0 +1,37 @@
+questions:
+  - id: choking_airway
+    text: Can the person speak, cough, or breathe?
+    options:
+      - id: coughing_forcefully
+        text: Coughing loudly and can still speak
+      - id: weak_cough
+        text: Weak cough, cannot speak properly
+        escalates_to: CRITICAL
+      - id: cannot_breathe
+        text: Cannot breathe, cough, or make any sound
+        escalates_to: CRITICAL
+  - id: choking_responsiveness
+    text: Is the person awake?
+    options:
+      - id: awake
+        text: Awake and standing or sitting
+      - id: unresponsive
+        text: Has collapsed or is not responding
+        escalates_to: CRITICAL
+  - id: choking_colour
+    text: What colour are their lips and face?
+    options:
+      - id: normal_colour
+        text: Normal colour
+      - id: blue_or_grey
+        text: Turning blue, grey, or very pale
+        escalates_to: CRITICAL
+  - id: choking_age_group
+    text: Who is choking?
+    options:
+      - id: adult_or_child
+        text: An adult or a child over 1 year
+      - id: infant_under_one
+        text: A baby under 1 year
+      - id: pregnant_or_large_body
+        text: A pregnant woman or a very large person

@@ -1,0 +1,27 @@
+# Banned phrases for English AI output.
+#
+# This is NOT a translation of hi.yaml — each list targets unsafe phrasing
+# natural to its own language.
+#
+# Scope: these patterns are matched only against strings that tell the user to
+# DO something (summary, action steps, monitor, follow-up reason). The `do_not`
+# list is excluded, and any sentence containing a negation cue is ignored, so
+# correct advice like "do not apply butter to a burn" is never flagged.
+banned_patterns:
+  - pattern: \b(paracetamol|acetaminophen|ibuprofen|aspirin|diclofenac|crocin|dolo|combiflam|antibiotics?|painkillers?|antiseptic cream)\b
+    reason: medication_advice
+  - pattern: \b\d+\s*(mg|ml|mcg|grams?|tablets?|capsules?|spoons?|teaspoons?|drops?)\b
+    reason: dosage_advice
+  - pattern: \b(toothpaste|butter|ghee|mustard oil|coconut oil|turmeric|haldi|cow dung|ash|kerosene|raw egg|honey on a burn|lime juice)\b
+    reason: harmful_home_remedy
+  - pattern: \b(ice cubes?|ice pack directly|ice water|iced water)\b
+    reason: harmful_cooling_method
+  - pattern: \b(induce vomiting|make (them|him|her) vomit|force vomiting)\b
+    reason: harmful_action
+  - pattern: \b(tourniquet|tie (a|the) (cloth|rope|belt) tightly)\b
+    reason: untrained_technique
+  - pattern: \b(you (are|have) (diagnosed|diagnosis)|this is definitely (a|an)\s+\w+ (infection|fracture|poisoning))\b
+    reason: diagnostic_claim
+  - pattern: \b(no need to (see|call|visit)|don't need to (see|call|visit)|do not call (112|108)|avoid calling (112|108))\b
+    reason: discourages_care
+    negation_exempt: true

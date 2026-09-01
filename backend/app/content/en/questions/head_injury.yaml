@@ -1,0 +1,31 @@
+questions:
+  - id: head_condition
+    text: How is the person right now?
+    options:
+      - id: awake_normal
+        text: Awake and behaving normally
+      - id: drowsy_confused
+        text: Vomited, very sleepy, or confused
+        escalates_to: CRITICAL
+      - id: was_knocked_out
+        text: Was knocked out, even briefly
+        escalates_to: CRITICAL
+  - id: head_wound
+    text: Is there bleeding or a wound?
+    options:
+      - id: bump_only
+        text: Only a bump or swelling
+      - id: bleeding_cut
+        text: A cut that is bleeding
+        escalates_to: URGENT
+      - id: fluid_from_ear_nose
+        text: Blood or clear fluid coming from the ear or nose
+        escalates_to: CRITICAL
+  - id: head_cause
+    text: How did the injury happen?
+    options:
+      - id: minor_bump
+        text: A minor bump or a fall from standing height
+      - id: fall_or_vehicle
+        text: A fall from height, road accident, or heavy object
+        escalates_to: CRITICAL

@@ -1,0 +1,39 @@
+questions:
+  - id: faint_awake
+    text: क्या मरीज़ अब होश में है?
+    options:
+      - id: woke_quickly
+        text: हां, एक-दो मिनट में होश आ गया
+      - id: awake_but_confused
+        text: होश में है, पर उलझन में या बहुत कमज़ोर है
+        escalates_to: URGENT
+      - id: still_unconscious
+        text: नहीं, अभी भी बेहोश है
+        escalates_to: CRITICAL
+  - id: faint_breathing
+    text: सांस सामान्य चल रही है?
+    options:
+      - id: breathing_normal
+        text: हां, सांस सामान्य है
+      - id: breathing_abnormal
+        text: नहीं — हांफना, घरघराहट, या बहुत धीमी सांस
+        escalates_to: CRITICAL
+  - id: faint_injury
+    text: गिरते समय चोट लगी?
+    options:
+      - id: no_injury
+        text: कोई चोट नहीं दिख रही
+      - id: hit_head
+        text: सिर टकराया है
+        escalates_to: URGENT
+      - id: bleeding_or_deformity
+        text: खून बह रहा है, या हाथ/पैर मुड़ा या टूटा लग रहा है
+        escalates_to: URGENT
+  - id: faint_repeat
+    text: क्या हाल में पहले भी ऐसा हुआ है?
+    options:
+      - id: first_time
+        text: नहीं, पहली बार हुआ है
+      - id: happened_before
+        text: हां, हाल में एक से ज़्यादा बार बेहोशी हुई है
+        escalates_to: URGENT

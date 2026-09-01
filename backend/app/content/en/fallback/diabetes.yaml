@@ -1,0 +1,91 @@
+default:
+  risk_level: URGENT
+  summary: >-
+    If they are fully awake, give a fast sugar now. If they are drowsy or
+    cannot swallow, call for help — do not force food or drink.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: If awake — give sugar
+      instruction: >-
+        Give 3–4 teaspoons of sugar in water, a glass of juice, or a few
+        sweets. Wait 10 minutes. If they improve, give a small snack.
+    - step: 2
+      title: Sit them safely
+      instruction: >-
+        Keep them sitting or lying where they cannot fall. Stay with them.
+    - step: 3
+      title: Do not give insulin now
+      instruction: >-
+        Do not give extra insulin or diabetes tablets unless a doctor tells
+        you to — extra insulin can make low sugar worse.
+    - step: 4
+      title: Get checked
+      instruction: >-
+        See a doctor the same day, even if they feel better. Ask about the
+        usual medicines and last meal.
+  do_not:
+    - Do not pour sugar or water into the mouth of a drowsy person.
+    - Do not give extra insulin “to be safe”.
+    - Do not leave them alone after a low-sugar episode.
+  monitor:
+    - Sweating, shaking, or confusion returning
+    - Whether they can stay awake and swallow
+    - Deep breathing or fruity smell on the breath
+  medical_follow_up:
+    required: true
+    reason: >-
+      Both low and high sugar can become dangerous quickly. A clinician
+      should review doses and fluids.
+  sources:
+    - nhs_first_aid
+    - mohfw_india
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    They cannot swallow safely or are unconscious. Call 112 or 108. Put
+    nothing in the mouth. Place them on their side if they are breathing.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 and say it is a diabetic emergency.
+    - step: 2
+      title: Nothing by mouth
+      instruction: >-
+        Do not give sugar, water, or tablets if they are not fully awake.
+    - step: 3
+      title: Recovery position
+      instruction: >-
+        If they are breathing, roll them onto their side so the airway stays
+        open.
+    - step: 4
+      title: Look for a medical card
+      instruction: >-
+        Check a wallet or phone for a diabetes card and tell the ambulance.
+    - step: 5
+      title: CPR if needed
+      instruction: >-
+        If they are not breathing normally, start chest compressions.
+  do_not:
+    - Do not put fingers, sugar, or a spoon in the mouth.
+    - Do not give insulin.
+    - Do not try to make them drink.
+  monitor:
+    - Breathing
+    - Whether they respond to voice
+    - Skin colour and sweating
+  medical_follow_up:
+    required: true
+    reason: >-
+      Unconscious hypoglycaemia or very high sugar with drowsiness needs
+      hospital treatment.
+  sources:
+    - nhs_first_aid
+    - mohfw_india

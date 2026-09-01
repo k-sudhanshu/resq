@@ -1,0 +1,48 @@
+questions:
+  - id: fever_how_high
+    text: How high does the fever feel, or what does a thermometer show?
+    options:
+      - id: mild
+        text: Warm, or under 39°C (102°F)
+      - id: high
+        text: Very hot, or 39°C (102°F) or more
+        escalates_to: URGENT
+      - id: unknown
+        text: No thermometer — just feels very hot
+        escalates_to: URGENT
+  - id: fever_danger
+    text: Any of these danger signs?
+    options:
+      - id: none
+        text: None of these
+      - id: stiff_neck_rash
+        text: Stiff neck, purple rash, or a fit
+        escalates_to: CRITICAL
+      - id: very_drowsy
+        text: Very drowsy, not drinking, or hard to wake
+        escalates_to: CRITICAL
+      - id: breathing_hard
+        text: Breathing is hard or very fast
+        escalates_to: CRITICAL
+  - id: fever_days
+    text: How long has the fever lasted?
+    options:
+      - id: under_2_days
+        text: Less than 2 days
+      - id: two_to_3
+        text: About 2 to 3 days
+        escalates_to: URGENT
+      - id: over_3
+        text: More than 3 days
+        escalates_to: URGENT
+  - id: fever_who
+    text: Who has the fever?
+    options:
+      - id: older_child_adult
+        text: A child over 3 months, or an adult
+      - id: young_baby
+        text: A baby under 3 months
+        escalates_to: CRITICAL
+      - id: elderly_or_pregnant
+        text: An elderly person, or someone who is pregnant
+        escalates_to: URGENT

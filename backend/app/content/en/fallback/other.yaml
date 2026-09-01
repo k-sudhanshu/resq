@@ -1,0 +1,104 @@
+# Generic guidance for the free-text flow, used when the AI cannot be reached
+# and no category-specific content applies.
+default:
+  risk_level: URGENT
+  summary: >-
+    We could not analyse the description right now. Follow these general first
+    aid steps and get medical advice.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Check for danger first
+      instruction: >-
+        Make sure the area is safe for you before helping — traffic, fire,
+        electricity, water, or chemicals.
+    - step: 2
+      title: Check response and breathing
+      instruction: >-
+        Speak to the person and tap their shoulder. Look and listen for normal
+        breathing for up to 10 seconds.
+    - step: 3
+      title: Call for help if anything is serious
+      instruction: >-
+        Call 112 or 108 if they are unresponsive, struggling to breathe,
+        bleeding heavily, or having a fit.
+    - step: 4
+      title: Keep them comfortable and still
+      instruction: >-
+        Help them into a comfortable position, keep them warm, and do not move
+        them unnecessarily.
+    - step: 5
+      title: Get medical advice
+      instruction: >-
+        Take them to a doctor or hospital, especially if the problem is getting
+        worse or you are unsure.
+  do_not:
+    - Do not give any medicine on your own.
+    - Do not use home remedies on wounds or burns.
+    - Do not give food or drink to a drowsy person.
+    - Do not put yourself in danger to reach someone.
+  monitor:
+    - Level of response and whether they stay awake
+    - Breathing becoming difficult, fast, or noisy
+    - Any new bleeding, severe pain, or worsening symptoms
+  medical_follow_up:
+    required: true
+    reason: >-
+      Without a proper assessment, a clinician should examine the person to
+      decide what treatment is needed.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    From what you described, this needs emergency help now. Call 112 or 108
+    immediately.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately. Put the phone on speaker so your hands
+        stay free.
+    - step: 2
+      title: Check danger, then response
+      instruction: >-
+        Make sure it is safe to approach. Speak to the person and tap their
+        shoulder to see if they respond.
+    - step: 3
+      title: Check breathing
+      instruction: >-
+        Look and listen for normal breathing for up to 10 seconds. If they are
+        not breathing normally, start chest compressions.
+    - step: 4
+      title: Put an unresponsive person on their side
+      instruction: >-
+        If they are unresponsive but breathing normally, roll them onto their
+        side so their airway stays clear.
+    - step: 5
+      title: Stay with them
+      instruction: >-
+        Keep them warm, keep talking to them, and stay beside them until help
+        arrives.
+  do_not:
+    - Do not give any medicine on your own.
+    - Do not give food or drink to a drowsy or unresponsive person.
+    - Do not move them unless they are in danger.
+    - Do not delay calling for help to search for information.
+  monitor:
+    - Whether they stay awake and can answer you
+    - Breathing, and whether it stops or becomes noisy
+    - Skin turning pale, grey, or blue
+  medical_follow_up:
+    required: true
+    reason: >-
+      Emergency assessment in hospital is needed to find and treat the cause.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

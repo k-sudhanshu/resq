@@ -1,0 +1,34 @@
+questions:
+  - id: seizure_now
+    text: अभी क्या हो रहा है?
+    options:
+      - id: stopped_resting
+        text: दौरा रुक गया है; मरीज़ को नींद या उलझन है
+      - id: still_shaking
+        text: अभी भी झटके आ रहे हैं — 5 मिनट से ज़्यादा हो गए
+        escalates_to: CRITICAL
+      - id: repeated_seizures
+        text: होश में आए बिना दूसरा दौरा शुरू हो गया
+        escalates_to: CRITICAL
+  - id: seizure_history
+    text: क्या मरीज़ को मिर्गी (दौरे की बीमारी) है?
+    options:
+      - id: known_epilepsy
+        text: हां, पहले भी दौरे आ चुके हैं
+      - id: first_seizure
+        text: नहीं — यह पहला दौरा है
+        escalates_to: URGENT
+      - id: pregnant_or_ill
+        text: मरीज़ गर्भवती है, डायबिटिक है, या तेज़ बुख़ार है
+        escalates_to: CRITICAL
+  - id: seizure_injury
+    text: क्या चोट लगी, या दौरा पानी में पड़ा?
+    options:
+      - id: not_injured
+        text: कोई चोट नहीं
+      - id: injured
+        text: सिर टकराया है या खून बह रहा है
+        escalates_to: URGENT
+      - id: in_water
+        text: दौरा पानी में (नहाते/तैरते समय) पड़ा
+        escalates_to: CRITICAL

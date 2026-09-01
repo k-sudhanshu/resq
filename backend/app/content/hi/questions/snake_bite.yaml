@@ -1,0 +1,33 @@
+questions:
+  - id: snake_condition
+    text: मरीज़ की हालत अभी कैसी है?
+    options:
+      - id: awake_ok
+        text: होश में है, बोल रहा है, सांस सामान्य है
+        escalates_to: URGENT
+      - id: swelling_fast
+        text: काटी जगह तेज़ी से सूज रही है या काली पड़ रही है
+        escalates_to: CRITICAL
+      - id: drowsy_or_bleeding
+        text: सुस्ती, उल्टी, पलकें झुकना, या मसूड़ों से खून आना
+        escalates_to: CRITICAL
+  - id: snake_bite_look
+    text: काटने का निशान कैसा दिख रहा है?
+    options:
+      - id: no_clear_marks
+        text: कोई साफ़ निशान नहीं, दर्द भी कम है
+        escalates_to: URGENT
+      - id: puncture_marks
+        text: एक या दो नुकीले दांतों के निशान
+        escalates_to: URGENT
+      - id: severe_pain
+        text: तेज़ दर्द, खून बहना, या काटी जगह पर छाले
+        escalates_to: CRITICAL
+  - id: snake_movement
+    text: काटने के बाद मरीज़ चला-फिरा है?
+    options:
+      - id: kept_still
+        text: नहीं, काटने के बाद से स्थिर है
+      - id: walked_or_ran
+        text: हां, चला, दौड़ा, या काफ़ी हिला-डुला है
+        escalates_to: URGENT

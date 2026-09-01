@@ -1,0 +1,30 @@
+questions:
+  - id: drown_condition
+    text: मरीज़ की हालत अभी कैसी है?
+    options:
+      - id: awake_coughing
+        text: होश में है और खांसकर पानी निकाल रहा है
+        escalates_to: URGENT
+      - id: breathing_unresponsive
+        text: सांस चल रही है, पर होश नहीं आ रहा
+        escalates_to: CRITICAL
+      - id: not_breathing
+        text: सांस नहीं चल रही, या बस हांफ रहा है
+        escalates_to: CRITICAL
+  - id: drown_out_of_water
+    text: क्या मरीज़ पानी से बाहर है?
+    options:
+      - id: out_on_land
+        text: हां, सूखी ज़मीन पर है
+      - id: still_in_water
+        text: नहीं, अभी भी पानी में है
+        escalates_to: CRITICAL
+  - id: drown_after
+    text: बाहर आने के बाद कैसा लग रहा है?
+    options:
+      - id: talking_ok
+        text: बोल रहा है, सांस ठीक है, ठीक लग रहा है
+        escalates_to: URGENT
+      - id: blue_lips_or_vomit
+        text: होंठ नीले, उल्टी, या बहुत ज़्यादा सुस्ती
+        escalates_to: CRITICAL

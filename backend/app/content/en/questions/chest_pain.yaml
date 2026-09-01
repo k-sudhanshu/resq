@@ -1,0 +1,33 @@
+questions:
+  - id: chest_feel
+    text: What does the pain feel like?
+    options:
+      - id: sharp_with_breath
+        text: A sharp pain that changes with breathing or pressing
+        escalates_to: URGENT
+      - id: pressure_squeezing
+        text: Heaviness, pressure, or squeezing in the centre of the chest
+        escalates_to: CRITICAL
+      - id: spreading_pain
+        text: Pain spreading to the arm, jaw, neck, or back
+        escalates_to: CRITICAL
+  - id: chest_other_signs
+    text: Anything else along with the pain?
+    options:
+      - id: nothing_else
+        text: None of these
+      - id: sweat_nausea
+        text: Cold sweat, nausea, or vomiting
+        escalates_to: CRITICAL
+      - id: breathless
+        text: Severe breathlessness
+        escalates_to: CRITICAL
+  - id: chest_duration
+    text: How long has the pain lasted?
+    options:
+      - id: passed_quickly
+        text: It eased within a few minutes
+        escalates_to: URGENT
+      - id: over_15_minutes
+        text: More than 15 minutes and still continuing
+        escalates_to: CRITICAL

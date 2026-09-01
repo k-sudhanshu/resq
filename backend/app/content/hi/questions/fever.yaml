@@ -1,0 +1,48 @@
+questions:
+  - id: fever_how_high
+    text: बुखार कितना तेज़ लग रहा है, या थर्मामीटर क्या दिखाता है?
+    options:
+      - id: mild
+        text: गरम, या 39°C (102°F) से कम
+      - id: high
+        text: बहुत गरम, या 39°C (102°F) या उससे ज़्यादा
+        escalates_to: URGENT
+      - id: unknown
+        text: थर्मामीटर नहीं — बस बहुत गरम लग रहा है
+        escalates_to: URGENT
+  - id: fever_danger
+    text: क्या इनमें से कोई ख़तरे का संकेत है?
+    options:
+      - id: none
+        text: इनमें से कुछ नहीं
+      - id: stiff_neck_rash
+        text: गर्दन अकड़ी, बैंगनी दाने, या दौरा
+        escalates_to: CRITICAL
+      - id: very_drowsy
+        text: बहुत ऊँघ रहे हैं, पी नहीं रहे, या जगाना मुश्किल है
+        escalates_to: CRITICAL
+      - id: breathing_hard
+        text: सांस भारी है या बहुत तेज़ है
+        escalates_to: CRITICAL
+  - id: fever_days
+    text: बुखार कितने दिन से है?
+    options:
+      - id: under_2_days
+        text: 2 दिन से कम
+      - id: two_to_3
+        text: लगभग 2 से 3 दिन
+        escalates_to: URGENT
+      - id: over_3
+        text: 3 दिन से ज़्यादा
+        escalates_to: URGENT
+  - id: fever_who
+    text: बुखार किसे है?
+    options:
+      - id: older_child_adult
+        text: 3 महीने से बड़ा बच्चा, या वयस्क
+      - id: young_baby
+        text: 3 महीने से छोटा शिशु
+        escalates_to: CRITICAL
+      - id: elderly_or_pregnant
+        text: बुज़ुर्ग, या गर्भवती
+        escalates_to: URGENT

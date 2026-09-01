@@ -1,0 +1,103 @@
+default:
+  risk_level: URGENT
+  summary: >-
+    While the person can still cough forcefully, let them keep coughing. Stay
+    with them and be ready to act if the cough becomes weak or silent.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Let them cough
+      instruction: >-
+        Encourage them to keep coughing hard. A strong cough clears a blockage
+        better than anything you can do.
+    - step: 2
+      title: Help them lean forward
+      instruction: >-
+        Ask them to lean forward slightly and stay standing or sitting upright.
+    - step: 3
+      title: Stay with them
+      instruction: >-
+        Do not leave them alone. Watch closely for the cough becoming weak or
+        silent.
+    - step: 4
+      title: Be ready to act
+      instruction: >-
+        If they can no longer cough, speak, or breathe, start back blows and
+        abdominal thrusts and call 112 or 108 straight away.
+    - step: 5
+      title: Get checked afterwards
+      instruction: >-
+        Even after the blockage clears, see a doctor if pain, coughing, or
+        difficulty swallowing continues.
+  do_not:
+    - Do not slap the back of someone who is coughing effectively.
+    - Do not put your fingers into their mouth to search blindly for the object.
+    - Do not give water to drink while they are still choking.
+    - Do not leave them alone to fetch help.
+  monitor:
+    - The cough becoming weak, quiet, or stopping
+    - Lips, face, or fingertips turning blue or grey
+    - The person becoming drowsy or collapsing
+  medical_follow_up:
+    required: true
+    reason: >-
+      A doctor should check for injury or any remaining object if symptoms
+      continue after the choking stops.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    The airway is blocked. Call 112 or 108 now and give back blows and
+    abdominal thrusts immediately.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately, or shout for someone else to call while
+        you start helping.
+    - step: 2
+      title: Give 5 back blows
+      instruction: >-
+        Bend them forward. Hit firmly between the shoulder blades with the heel
+        of your hand, up to 5 times.
+    - step: 3
+      title: Give 5 abdominal thrusts
+      instruction: >-
+        Stand behind them, place a fist just above the navel, grasp it with
+        your other hand, and pull sharply inwards and upwards up to 5 times.
+        Do not do this to a baby under 1 year.
+    - step: 4
+      title: For a baby under 1 year
+      instruction: >-
+        Lay the baby face down along your forearm. Give 5 back blows, then turn
+        them over and give 5 chest thrusts with two fingers on the breastbone.
+    - step: 5
+      title: If they become unresponsive
+      instruction: >-
+        Lower them to the floor and start chest compressions, pushing hard and
+        fast in the centre of the chest until help arrives.
+  do_not:
+    - Do not do abdominal thrusts on a baby under 1 year.
+    - Do not put your fingers into their mouth to search blindly for the object.
+    - Do not give anything to eat or drink.
+    - Do not stop and wait to see if it clears on its own.
+  monitor:
+    - Whether any air is moving in and out
+    - Lips and face turning blue or grey
+    - Whether they stay awake and responsive
+  medical_follow_up:
+    required: true
+    reason: >-
+      Anyone who received abdominal thrusts or chest thrusts must be checked in
+      hospital for internal injury.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

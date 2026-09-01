@@ -1,0 +1,34 @@
+questions:
+  - id: seizure_now
+    text: What is happening right now?
+    options:
+      - id: stopped_resting
+        text: The seizure has stopped; the person is sleepy or confused
+      - id: still_shaking
+        text: Still shaking — it has lasted more than 5 minutes
+        escalates_to: CRITICAL
+      - id: repeated_seizures
+        text: A second seizure started without the person waking in between
+        escalates_to: CRITICAL
+  - id: seizure_history
+    text: Does the person have epilepsy (a known seizure illness)?
+    options:
+      - id: known_epilepsy
+        text: Yes, they have had seizures before
+      - id: first_seizure
+        text: No — this is their first seizure
+        escalates_to: URGENT
+      - id: pregnant_or_ill
+        text: The person is pregnant, diabetic, or has high fever
+        escalates_to: CRITICAL
+  - id: seizure_injury
+    text: Did they get injured, or were they in water?
+    options:
+      - id: not_injured
+        text: No injury
+      - id: injured
+        text: They hit their head or are bleeding
+        escalates_to: URGENT
+      - id: in_water
+        text: The seizure happened in water
+        escalates_to: CRITICAL

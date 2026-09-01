@@ -1,0 +1,103 @@
+default:
+  risk_level: URGENT
+  summary: >-
+    Every suspected poisoning needs medical advice, even if the person looks
+    fine. Do not make them vomit.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Move them away from the substance
+      instruction: >-
+        Take the person into fresh air, away from fumes or spills. Protect
+        yourself first if chemicals are involved.
+    - step: 2
+      title: Keep the container
+      instruction: >-
+        Find the packet, bottle, or plant and take it with you. Doctors need to
+        know exactly what it was.
+    - step: 3
+      title: Rinse mouth or skin
+      instruction: >-
+        If they swallowed something, let them rinse their mouth with water. If
+        it is on the skin, rinse with plenty of running water for 15 minutes.
+    - step: 4
+      title: Keep them sitting and calm
+      instruction: >-
+        Help them sit quietly and watch them closely. If they vomit on their
+        own, turn their head to the side.
+    - step: 5
+      title: Get medical advice now
+      instruction: >-
+        Take them to the nearest hospital, or call 112 or 108 for advice, even
+        if they seem well.
+  do_not:
+    - Do not try to make them vomit.
+    - Do not give milk, salt water, or any home remedy to neutralise the poison.
+    - Do not give anything to drink if they are drowsy or struggling to breathe.
+    - Do not wait for symptoms to appear before getting advice.
+  monitor:
+    - Becoming drowsy, confused, or unresponsive
+    - Breathing becoming slow, noisy, or difficult
+    - Repeated vomiting, fits, or burns around the mouth
+  medical_follow_up:
+    required: true
+    reason: >-
+      Some poisons cause damage hours later, so a clinician must assess the
+      substance, the amount, and the timing.
+  sources:
+    - nhs_first_aid
+    - mohfw_india
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    This is a medical emergency. Call 112 or 108 now and take the container
+    with you to the hospital.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately. Tell them what was taken, how much, and
+        when, if you know.
+    - step: 2
+      title: Move to fresh air safely
+      instruction: >-
+        Get the person away from fumes or spills without putting yourself at
+        risk. Open doors and windows.
+    - step: 3
+      title: Put them on their side
+      instruction: >-
+        If they are drowsy or unresponsive but breathing, roll them onto their
+        side with the head tilted slightly down so vomit can drain.
+    - step: 4
+      title: Check breathing continuously
+      instruction: >-
+        If they stop breathing normally, start chest compressions, pushing hard
+        and fast in the centre of the chest.
+    - step: 5
+      title: Take the container along
+      instruction: >-
+        Send the packet, bottle, or plant sample with the ambulance so the
+        hospital can identify the poison.
+  do_not:
+    - Do not try to make them vomit.
+    - Do not give milk, salt water, or any home remedy to neutralise the poison.
+    - Do not give anything by mouth to a drowsy or unresponsive person.
+    - Do not leave them lying flat on their back.
+  monitor:
+    - Breathing rate and whether it becomes noisy or stops
+    - Level of response, and whether they can be woken
+    - Fits, or blue lips and fingertips
+  medical_follow_up:
+    required: true
+    reason: >-
+      Poisoning at this level needs hospital treatment, monitoring, and
+      possibly an antidote.
+  sources:
+    - nhs_first_aid
+    - mohfw_india

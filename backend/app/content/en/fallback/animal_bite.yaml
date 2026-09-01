@@ -1,0 +1,105 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Wash the bite with soap and running water for 15 minutes, cover it, and
+    see a doctor about rabies protection — every dog, cat, or monkey bite in
+    India needs medical advice, even a small one.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Wash the wound thoroughly
+      instruction: >-
+        Wash the bite under running water with soap for a full 15 minutes.
+        This is the single most important step against rabies.
+    - step: 2
+      title: Apply an antiseptic
+      instruction: >-
+        After washing, apply an antiseptic such as povidone-iodine if
+        available.
+    - step: 3
+      title: Control any bleeding
+      instruction: >-
+        Press a clean cloth on the wound until the bleeding stops.
+    - step: 4
+      title: Cover loosely
+      instruction: >-
+        Cover with a clean cloth or loose dressing. Do not stitch or seal it
+        tightly.
+    - step: 5
+      title: See a doctor today
+      instruction: >-
+        Go to a doctor or health centre the same day for rabies vaccination
+        advice and a tetanus injection. Take the animal's details with you.
+  do_not:
+    - Do not apply chilli, lime, turmeric, oil, or ash to the wound.
+    - Do not ignore a small bite or scratch — rabies can enter through it.
+    - Do not delay the rabies vaccine to see if the animal seems healthy.
+  monitor:
+    - Growing redness, swelling, pus, or fever in the next days
+    - The animal, if known — report if it falls sick or dies within 10 days
+    - Numbness or tingling spreading from the bite
+  medical_follow_up:
+    required: true
+    reason: >-
+      A doctor must decide about rabies vaccination and tetanus. Rabies is
+      almost always fatal once symptoms start, but fully preventable with
+      timely vaccination.
+  sources:
+    - who_animal_bites
+    - mohfw_india
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    Deep or multiple wounds need emergency care. Call 112 or 108, control the
+    bleeding with firm pressure, and keep the person still until help arrives.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately. Put the phone on speaker so your hands
+        stay free to help.
+    - step: 2
+      title: Press hard on the bleeding
+      instruction: >-
+        Press a clean cloth firmly on the wound. If blood soaks through, add
+        another cloth on top without lifting the first.
+    - step: 3
+      title: Lay the person down
+      instruction: >-
+        Lay them down and raise the bleeding limb if possible. Keep them warm
+        and calm.
+    - step: 4
+      title: Wash lighter wounds if you can
+      instruction: >-
+        If bleeding is controlled, gently wash lighter wounds with soap and
+        running water for 15 minutes while waiting.
+    - step: 5
+      title: Stay until help arrives
+      instruction: >-
+        Keep pressure on the wound and stay with the person until the
+        ambulance arrives.
+  do_not:
+    - Do not remove a cloth that is soaked with blood — add more on top.
+    - Do not apply chilli, lime, turmeric, oil, or ash to the wound.
+    - Do not give anything to eat or drink.
+  monitor:
+    - Whether the bleeding is slowing with pressure
+    - Pale, cold, or clammy skin, or the person feeling faint
+    - Whether they stay awake and responsive
+  medical_follow_up:
+    required: true
+    reason: >-
+      Deep animal bites need cleaning in hospital, rabies and tetanus
+      protection, and sometimes surgery.
+  sources:
+    - who_animal_bites
+    - nhs_first_aid

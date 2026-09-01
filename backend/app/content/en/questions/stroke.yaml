@@ -1,0 +1,37 @@
+questions:
+  - id: stroke_face
+    text: Ask them to smile. Does one side of the face droop?
+    options:
+      - id: face_even
+        text: Both sides look the same
+      - id: face_droop
+        text: One side droops or looks uneven
+        escalates_to: CRITICAL
+  - id: stroke_arms
+    text: Ask them to raise both arms. What happens?
+    options:
+      - id: arms_ok
+        text: Both arms stay up
+      - id: arm_drops
+        text: One arm drifts down or cannot lift
+        escalates_to: CRITICAL
+  - id: stroke_speech
+    text: Ask them to say a simple sentence. How do they speak?
+    options:
+      - id: speech_clear
+        text: Speech is clear and makes sense
+      - id: speech_slurred
+        text: Speech is slurred, strange, or they cannot speak
+        escalates_to: CRITICAL
+  - id: stroke_time
+    text: When did this start?
+    options:
+      - id: just_now
+        text: In the last hour
+        escalates_to: CRITICAL
+      - id: few_hours
+        text: A few hours ago
+        escalates_to: CRITICAL
+      - id: not_sure
+        text: Not sure, or they woke up like this
+        escalates_to: CRITICAL

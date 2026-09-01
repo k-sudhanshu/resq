@@ -1,0 +1,106 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Lie the person flat and raise their legs. Most fainting passes in a
+    minute or two, but a doctor should still find out why it happened.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Lie them down, legs up
+      instruction: >-
+        Lay the person flat on their back and raise their legs on a pillow,
+        bag, or your arm. This brings blood back to the brain.
+    - step: 2
+      title: Give air and loosen clothing
+      instruction: >-
+        Move the crowd back, open windows, and loosen tight collars or belts.
+    - step: 3
+      title: Let them recover slowly
+      instruction: >-
+        When they wake, keep them lying for a few minutes, then let them sit
+        up slowly. Standing too fast can cause another faint.
+    - step: 4
+      title: Give a drink when fully awake
+      instruction: >-
+        Once fully alert, give sips of water, ORS, or something sweet if they
+        have not eaten for long.
+    - step: 5
+      title: Get the cause checked
+      instruction: >-
+        See a doctor to find the reason — especially in the elderly, in
+        pregnancy, in diabetics, or if it happened during exercise.
+  do_not:
+    - Do not splash water on the face or slap the person to wake them.
+    - Do not give food or drink until they are fully awake.
+    - Do not make them stand up quickly.
+    - Do not crowd around them — they need air.
+  monitor:
+    - Whether they wake fully within a minute or two
+    - Repeated fainting, chest pain, or palpitations
+    - Any injury from the fall, especially to the head
+  medical_follow_up:
+    required: true
+    reason: >-
+      Fainting has many causes — low sugar, dehydration, heart rhythm
+      problems. A doctor should identify the cause, especially if it repeats.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    A person who stays unconscious or is not breathing normally needs
+    emergency help now. Call 112 or 108 and protect their airway while you
+    wait.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately. Put the phone on speaker so your hands
+        stay free.
+    - step: 2
+      title: Check breathing
+      instruction: >-
+        Tilt the head back gently and look, listen, and feel for breathing
+        for up to 10 seconds.
+    - step: 3
+      title: If breathing — recovery position
+      instruction: >-
+        If they are breathing, roll them onto their side with the head tilted
+        slightly back so the airway stays open.
+    - step: 4
+      title: If not breathing — start compressions
+      instruction: >-
+        If they are not breathing or only gasping, start chest compressions
+        in the centre of the chest — push hard and fast, about twice per
+        second — and do not stop until help arrives.
+    - step: 5
+      title: Stay and re-check
+      instruction: >-
+        Stay with them and check breathing again every minute until the
+        ambulance arrives.
+  do_not:
+    - Do not give anything to eat or drink.
+    - Do not leave the person alone.
+    - Do not put a pillow under the head while they are unconscious on their back.
+  monitor:
+    - Breathing — whether it stays normal
+    - Whether they respond to voice or touch
+    - Any seizure movements or vomiting
+  medical_follow_up:
+    required: true
+    reason: >-
+      Prolonged unconsciousness can be caused by stroke, heart problems, low
+      sugar, or poisoning — all need hospital care.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

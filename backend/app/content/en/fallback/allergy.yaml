@@ -1,0 +1,95 @@
+default:
+  risk_level: URGENT
+  summary: >-
+    Remove what caused the reaction if you can do so safely. Watch breathing
+    closely. A spreading rash or a sting with feeling faint needs urgent care.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Stop the cause
+      instruction: >-
+        Move away from the insect, food, or medicine. If a stinger is visible
+        in the skin, scrape it off sideways with a card — do not squeeze.
+    - step: 2
+      title: Sit them up if breathing is hard
+      instruction: >-
+        If the chest feels tight, sit them up and lean them slightly forward.
+        If they feel faint, lie them flat and raise the legs.
+    - step: 3
+      title: Cool the bite or rash
+      instruction: >-
+        A cool wet cloth on a sting or itchy patch can ease pain. Do not put
+        mud, oil, or toothpaste on it.
+    - step: 4
+      title: Get medical advice
+      instruction: >-
+        See a doctor the same day if the rash is spreading, the face is
+        puffy, or it was a scorpion sting.
+  do_not:
+    - Do not give leftover or unknown allergy tablets without knowing the dose.
+    - Do not tie a tight band above a sting.
+    - Do not wait at home if breathing changes even a little.
+  monitor:
+    - Breathing, wheeze, or throat tightness
+    - Swelling of lips, tongue, or face
+    - Feeling faint or a spreading rash
+  medical_follow_up:
+    required: true
+    reason: >-
+      Allergic reactions can worsen after the first hour. A clinician should
+      decide if adrenaline or other treatment is needed.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    Swelling of the mouth or trouble breathing is anaphylaxis. Call 112 or
+    108 now. Use an adrenaline pen if one is available.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 and say it is a severe allergic reaction.
+    - step: 2
+      title: Use the adrenaline pen if you have one
+      instruction: >-
+        Inject into the outer mid-thigh, through clothing if needed. Hold
+        for the time on the pen. A second dose may be needed after 5 minutes
+        if they are not better and another pen is there.
+    - step: 3
+      title: Position
+      instruction: >-
+        If breathing is hard, sit them up. If they feel faint, lie flat and
+        raise the legs. Do not make them stand or walk.
+    - step: 4
+      title: Remove the cause if safe
+      instruction: >-
+        Scrape out a visible stinger. Do not delay the call to hunt for it.
+    - step: 5
+      title: Be ready for CPR
+      instruction: >-
+        If they become unresponsive and are not breathing normally, start
+        chest compressions.
+  do_not:
+    - Do not give food or drink.
+    - Do not put a pillow under the head if they are faint — it can worsen shock.
+    - Do not wait for a rash before calling if breathing is affected.
+  monitor:
+    - Breathing and voice (hoarse voice is a warning)
+    - Colour of the lips
+    - Whether they stay awake
+  medical_follow_up:
+    required: true
+    reason: >-
+      Anaphylaxis can return after the first pen. They must go to hospital
+      even if they look better.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

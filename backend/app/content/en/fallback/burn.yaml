@@ -1,0 +1,109 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly: same risk levels, same
+# emergency flags, same number of steps/do_not/monitor entries, same sources.
+default:
+  risk_level: URGENT
+  summary: >-
+    Cool the burn under running water and keep it clean. A doctor should check
+    any burn that is blistered, larger than the palm, or on the face, hands,
+    feet, or joints.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Stop the burning
+      instruction: >-
+        Move the person away from the heat. Gently remove hot clothing,
+        jewellery, or watches near the burn, but leave anything that is stuck
+        to the skin.
+    - step: 2
+      title: Cool with running water
+      instruction: >-
+        Hold the burn under cool running water for 20 minutes. Do this even if
+        some time has already passed since the burn.
+    - step: 3
+      title: Keep the rest of the body warm
+      instruction: >-
+        Cover the person with a blanket or dry cloth, away from the burn, so
+        they do not get cold while you cool the injury.
+    - step: 4
+      title: Cover the burn loosely
+      instruction: >-
+        After cooling, lay clean cling film over the burn, or use a clean cloth
+        that will not leave fibres behind. Do not wrap it tightly.
+    - step: 5
+      title: Get it checked
+      instruction: >-
+        Take the person to a doctor or hospital for anything blistered, larger
+        than their palm, or on the face, hands, feet, or joints.
+  do_not:
+    - Do not put toothpaste, butter, ghee, oil, turmeric, or ash on a burn.
+    - Do not use ice or ice-cold water to cool it.
+    - Do not break the blisters.
+    - Do not pull off clothing that is stuck to the burnt skin.
+  monitor:
+    - Breathing becoming difficult, or the voice turning hoarse
+    - The burn becoming more painful, swollen, or starting to smell
+    - Fever, or the person becoming drowsy or confused
+  medical_follow_up:
+    required: true
+    reason: >-
+      A doctor needs to judge how deep the burn is and whether a tetanus
+      injection or dressing is needed.
+  sources:
+    - who_burns
+    - nhs_first_aid
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    This burn needs emergency help now. Call 112 or 108 and start cooling the
+    burn while you wait.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately. Put the phone on speaker so your hands
+        stay free to help.
+    - step: 2
+      title: Stop the burning safely
+      instruction: >-
+        Move the person away from the heat only if it is safe for you. Never
+        enter a burning or smoke-filled room yourself.
+    - step: 3
+      title: Protect their breathing
+      instruction: >-
+        If breathing is difficult or the voice sounds hoarse, keep them sitting
+        upright and loosen anything tight around the neck and chest.
+    - step: 4
+      title: Cool the burn while waiting
+      instruction: >-
+        Pour cool running water over the burnt area for 20 minutes. Keep the
+        rest of the body covered and warm.
+    - step: 5
+      title: Cover and stay with them
+      instruction: >-
+        Lay clean cling film or a clean cloth over the burn and stay beside the
+        person until help arrives.
+  do_not:
+    - Do not put toothpaste, butter, ghee, oil, turmeric, or ash on a burn.
+    - Do not use ice or ice-cold water to cool it.
+    - Do not give anything to eat or drink if breathing is difficult.
+    - Do not wait to see if the burn improves before calling for help.
+  monitor:
+    - Breathing, and whether they can still speak clearly
+    - Whether they stay awake and responsive
+    - Cold, clammy skin or shivering
+  medical_follow_up:
+    required: true
+    reason: >-
+      Burns of this severity need hospital treatment for fluids, pain relief,
+      and wound care.
+  sources:
+    - who_burns
+    - nhs_first_aid

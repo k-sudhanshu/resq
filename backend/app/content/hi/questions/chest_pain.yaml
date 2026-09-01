@@ -1,0 +1,33 @@
+questions:
+  - id: chest_feel
+    text: दर्द कैसा महसूस हो रहा है?
+    options:
+      - id: sharp_with_breath
+        text: चुभने वाला दर्द, जो सांस लेने या दबाने से बदलता है
+        escalates_to: URGENT
+      - id: pressure_squeezing
+        text: सीने के बीच में भारीपन, दबाव, या जकड़न
+        escalates_to: CRITICAL
+      - id: spreading_pain
+        text: दर्द बांह, जबड़े, गर्दन, या पीठ की ओर फैल रहा है
+        escalates_to: CRITICAL
+  - id: chest_other_signs
+    text: दर्द के साथ और कुछ हो रहा है?
+    options:
+      - id: nothing_else
+        text: इनमें से कुछ नहीं
+      - id: sweat_nausea
+        text: ठंडा पसीना, जी मिचलाना, या उल्टी
+        escalates_to: CRITICAL
+      - id: breathless
+        text: सांस बहुत फूल रही है
+        escalates_to: CRITICAL
+  - id: chest_duration
+    text: दर्द कितनी देर से है?
+    options:
+      - id: passed_quickly
+        text: कुछ ही मिनट में कम हो गया
+        escalates_to: URGENT
+      - id: over_15_minutes
+        text: 15 मिनट से ज़्यादा हो गए, अभी भी है
+        escalates_to: CRITICAL

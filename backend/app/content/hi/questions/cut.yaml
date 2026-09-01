@@ -1,0 +1,45 @@
+questions:
+  - id: cut_bleeding_control
+    text: घाव पर कसकर दबाने से क्या होता है?
+    options:
+      - id: bleeding_stopped
+        text: खून बहना बंद हो गया है
+      - id: bleeding_slows
+        text: कम हो जाता है, पर रिसता रहता है
+        escalates_to: URGENT
+      - id: bleeding_uncontrolled
+        text: खून तेज़ी से बहता रहता है या फुहार निकलती है
+        escalates_to: CRITICAL
+  - id: cut_responsiveness
+    text: मरीज़ की हालत कैसी है?
+    options:
+      - id: fully_alert
+        text: पूरा होश में है और ठीक से बात कर रहा है
+      - id: drowsy_or_confused
+        text: सुस्त, घबराया हुआ, पीला पड़ रहा है, या पसीना आ रहा है
+        escalates_to: CRITICAL
+      - id: unresponsive
+        text: कोई जवाब नहीं दे रहा
+        escalates_to: CRITICAL
+  - id: cut_location
+    text: घाव कहां है?
+    options:
+      - id: arm_or_leg
+        text: हाथ या पैर पर
+      - id: head_or_neck
+        text: सिर या गर्दन पर
+        escalates_to: URGENT
+      - id: chest_or_abdomen
+        text: छाती या पेट पर
+        escalates_to: CRITICAL
+  - id: cut_depth
+    text: घाव कितना गहरा है?
+    options:
+      - id: shallow_scrape
+        text: हल्का कटा या छिल गया है
+      - id: deep_or_gaping
+        text: गहरा है, या घाव के किनारे खुले हुए हैं
+        escalates_to: URGENT
+      - id: object_embedded
+        text: घाव में कोई चीज़ फंसी हुई है
+        escalates_to: URGENT

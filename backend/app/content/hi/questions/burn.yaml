@@ -1,0 +1,45 @@
+questions:
+  - id: burn_breathing
+    text: क्या मरीज़ को सांस लेने में तकलीफ़ है, या उसने धुआं अंदर लिया है?
+    options:
+      - id: breathing_normal
+        text: सांस सामान्य चल रही है
+      - id: breathing_difficult
+        text: सांस लेने में तकलीफ़, ज़ोर की खांसी, या आवाज़ बैठ गई है
+        escalates_to: CRITICAL
+  - id: burn_location
+    text: जलन शरीर के किस हिस्से पर है?
+    options:
+      - id: arm_or_leg
+        text: हाथ या पैर पर
+      - id: hand_or_joint
+        text: हथेली, तलवे, या जोड़ पर
+        escalates_to: URGENT
+      - id: face_or_neck
+        text: चेहरे, गले, या मुंह पर
+        escalates_to: CRITICAL
+      - id: chest_or_back
+        text: छाती, पीठ, या पेट पर
+        escalates_to: URGENT
+  - id: burn_size
+    text: जला हुआ हिस्सा कितना बड़ा है?
+    options:
+      - id: smaller_than_palm
+        text: मरीज़ की हथेली से छोटा
+      - id: about_palm
+        text: लगभग हथेली के बराबर
+        escalates_to: URGENT
+      - id: larger_than_palm
+        text: हथेली से बड़ा
+        escalates_to: URGENT
+  - id: burn_appearance
+    text: जली हुई जगह कैसी दिख रही है?
+    options:
+      - id: red_and_painful
+        text: लाल और दर्द है, त्वचा फटी नहीं है
+      - id: blistered
+        text: छाले पड़ गए हैं
+        escalates_to: URGENT
+      - id: white_or_charred
+        text: सफ़ेद, सख़्त, या काली और झुलसी हुई
+        escalates_to: CRITICAL

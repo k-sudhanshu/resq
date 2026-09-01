@@ -1,0 +1,35 @@
+questions:
+  - id: breath_severity
+    text: सांस की हालत अभी कितनी ख़राब है?
+    options:
+      - id: full_sentences
+        text: अभी भी पूरे वाक्य बोल पा रहा है
+        escalates_to: URGENT
+      - id: few_words
+        text: एक बार में बस दो-चार शब्द बोल पा रहा है
+        escalates_to: CRITICAL
+      - id: blue_or_silent
+        text: होंठ नीले पड़ रहे हैं, या बोलने लायक़ सांस ही नहीं है
+        escalates_to: CRITICAL
+  - id: breath_cause
+    text: क्या मरीज़ को सांस की कोई पुरानी बीमारी है?
+    options:
+      - id: asthma_with_inhaler
+        text: हां — अस्थमा है, और इनहेलर पास में है
+      - id: no_known_illness
+        text: सांस की कोई जानी हुई बीमारी नहीं है
+        escalates_to: URGENT
+      - id: allergy_swelling
+        text: खाना, डंक, या दवा के बाद चेहरा, होंठ, या गला सूज रहा है
+        escalates_to: CRITICAL
+  - id: breath_onset
+    text: यह शुरू कैसे हुआ?
+    options:
+      - id: gradually
+        text: धीरे-धीरे, कई घंटों या दिनों में
+      - id: suddenly
+        text: अचानक, कुछ ही मिनटों में
+        escalates_to: CRITICAL
+      - id: after_choking
+        text: खाना या कोई चीज़ गलत नली में जाने के बाद
+        escalates_to: CRITICAL

@@ -1,0 +1,102 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Chest pain should never be ignored. Make the person rest, avoid any
+    exertion, and get a medical check today — even if the pain eases.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Stop all activity
+      instruction: >-
+        Make the person sit down and rest at once, in whatever position feels
+        easiest — often half-sitting with the back supported.
+    - step: 2
+      title: Loosen tight clothing
+      instruction: >-
+        Loosen the collar, belt, and anything tight. Keep the surroundings
+        calm and give them fresh air.
+    - step: 3
+      title: Watch the pain closely
+      instruction: >-
+        If the pain becomes heavy or squeezing, spreads to the arm, jaw, or
+        back, or brings sweating or breathlessness — call 112 or 108 at once.
+    - step: 4
+      title: Get checked today
+      instruction: >-
+        Even if the pain settles, see a doctor the same day. Take a list of
+        any medicines the person is on.
+  do_not:
+    - Do not let the person walk, climb stairs, or drive.
+    - Do not dismiss the pain as gas or acidity without a medical check.
+    - Do not leave them alone while the pain continues.
+  monitor:
+    - Pain becoming heavy, squeezing, or spreading
+    - Cold sweat, nausea, breathlessness, or dizziness
+    - Irregular or very fast heartbeat
+  medical_follow_up:
+    required: true
+    reason: >-
+      Only tests like an ECG can tell heart pain from other causes. A same-day
+      check is the safe choice.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    These are signs of a possible heart attack. Call 112 or 108 now. Make the
+    person rest half-sitting, and do not let them move around.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately and say it may be a heart attack. Put the
+        phone on speaker.
+    - step: 2
+      title: Rest in a half-sitting position
+      instruction: >-
+        Sit the person on the floor or bed, knees bent, back and head
+        supported — this eases the strain on the heart.
+    - step: 3
+      title: Aspirin, if easily available
+      instruction: >-
+        If the person is fully awake, not allergic to aspirin, and it is at
+        hand, let them slowly chew one adult aspirin (about 300 mg). Do not
+        go out searching for it.
+    - step: 4
+      title: Keep them calm and still
+      instruction: >-
+        Loosen tight clothing and keep them warm and reassured. No walking,
+        no eating, no smoking.
+    - step: 5
+      title: Be ready to do CPR
+      instruction: >-
+        If they stop responding and are not breathing normally, start chest
+        compressions in the centre of the chest, hard and fast, until help
+        arrives.
+  do_not:
+    - Do not let the person walk or exert themselves in any way.
+    - Do not give food, water, or other medicines.
+    - Do not wait to see if the pain passes before calling for help.
+    - Do not drive them yourself unless there is truly no ambulance.
+  monitor:
+    - Whether the pain changes, spreads, or eases
+    - Breathing and skin colour
+    - Whether they stay awake and responsive
+  medical_follow_up:
+    required: true
+    reason: >-
+      A heart attack needs urgent hospital treatment to reopen the blocked
+      artery — every minute of delay damages more heart muscle.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

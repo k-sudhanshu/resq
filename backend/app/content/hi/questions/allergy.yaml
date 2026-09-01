@@ -1,0 +1,40 @@
+questions:
+  - id: allergy_breathing
+    text: क्या सांस लेने में दिक्कत है, या होंठ, जीभ, या गला सूज गया है?
+    options:
+      - id: breathing_ok
+        text: सांस सामान्य है, मुँह सूजा नहीं है
+      - id: swelling_or_wheeze
+        text: घरघराहट, सीना कसा, या होंठ/जीभ/गला सूज गया
+        escalates_to: CRITICAL
+  - id: allergy_cause
+    text: यह कैसे शुरू हुआ?
+    options:
+      - id: food_or_medicine
+        text: खाना, दवाई, या कुछ खाया-लिया
+      - id: insect_sting
+        text: कीड़े का काटना या बिच्छू
+      - id: unknown
+        text: पक्का नहीं
+  - id: allergy_skin
+    text: त्वचा कैसी दिख रही है?
+    options:
+      - id: small_area
+        text: सिर्फ़ एक छोटी जगह पर खुजली या दाने
+      - id: spreading
+        text: पित्ती या दाने पूरे शरीर पर फैल रहे हैं
+        escalates_to: URGENT
+      - id: pale_or_blue
+        text: त्वचा पीली/धुंधली है, या बेहोशी जैसा लग रहा है
+        escalates_to: CRITICAL
+  - id: allergy_known
+    text: क्या पहले से गंभीर एलर्जी है, या एड्रेनालिन पेन है?
+    options:
+      - id: no_known
+        text: कोई ज्ञात गंभीर एलर्जी नहीं
+      - id: has_pen
+        text: हाँ — एड्रेनालिन (एपिनेफ्रिन) पेन है
+        escalates_to: URGENT
+      - id: known_no_pen
+        text: गंभीर एलर्जी है, लेकिन पेन यहाँ नहीं है
+        escalates_to: URGENT

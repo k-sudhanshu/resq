@@ -1,0 +1,31 @@
+questions:
+  - id: head_condition
+    text: मरीज़ की हालत अभी कैसी है?
+    options:
+      - id: awake_normal
+        text: होश में है और सामान्य बर्ताव कर रहा है
+      - id: drowsy_confused
+        text: उल्टी हुई, बहुत नींद आ रही है, या उलझन में है
+        escalates_to: CRITICAL
+      - id: was_knocked_out
+        text: बेहोश हुआ था, चाहे थोड़ी देर के लिए ही
+        escalates_to: CRITICAL
+  - id: head_wound
+    text: खून बह रहा है या घाव है?
+    options:
+      - id: bump_only
+        text: सिर्फ़ गूमड़ या सूजन है
+      - id: bleeding_cut
+        text: कटा है और खून बह रहा है
+        escalates_to: URGENT
+      - id: fluid_from_ear_nose
+        text: कान या नाक से खून या पानी जैसा तरल आ रहा है
+        escalates_to: CRITICAL
+  - id: head_cause
+    text: चोट कैसे लगी?
+    options:
+      - id: minor_bump
+        text: हल्की टक्कर, या खड़े-खड़े गिरने से
+      - id: fall_or_vehicle
+        text: ऊंचाई से गिरना, सड़क हादसा, या भारी चीज़ गिरना
+        escalates_to: CRITICAL

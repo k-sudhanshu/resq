@@ -1,0 +1,106 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Sit the person upright, keep them calm, and help them use their inhaler
+    if they have one. Breathlessness that does not settle needs a doctor
+    today.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Sit them upright
+      instruction: >-
+        Sit the person up, leaning slightly forward with arms resting on a
+        table or knees. Do not lie them down.
+    - step: 2
+      title: Keep calm, give air
+      instruction: >-
+        Open windows, move people back, and loosen tight clothing. Panic
+        makes breathing harder — speak slowly and calmly.
+    - step: 3
+      title: Use their inhaler
+      instruction: >-
+        If they have asthma, help them take their reliever inhaler (usually
+        blue): one puff at a time, up to 10 puffs, with slow deep breaths.
+    - step: 4
+      title: Watch how they speak
+      instruction: >-
+        If they can only speak a few words at a time, or the inhaler is not
+        helping within 10 minutes, call 112 or 108.
+    - step: 5
+      title: See a doctor today
+      instruction: >-
+        Any new or worsening breathlessness needs a medical check the same
+        day, even after it settles.
+  do_not:
+    - Do not lie the person flat.
+    - Do not crowd around them or make them talk continuously.
+    - Do not give home steam or smoke treatments during an attack.
+  monitor:
+    - Whether talking becomes harder — full sentences or only words
+    - Lips or fingertips turning blue or grey
+    - Breathing getting faster, noisier, or more laboured
+  medical_follow_up:
+    required: true
+    reason: >-
+      The cause — asthma, infection, heart trouble, or allergy — must be
+      identified and treated by a doctor.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    Severe breathing difficulty is an emergency. Call 112 or 108 now. Keep
+    the person sitting upright and help with their inhaler while you wait.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately and describe the breathing. Put the phone
+        on speaker so your hands stay free.
+    - step: 2
+      title: Sit them upright
+      instruction: >-
+        Keep the person sitting up and leaning slightly forward. Do not lie
+        them down, even if they are exhausted.
+    - step: 3
+      title: Inhaler, if they have asthma
+      instruction: >-
+        Help them take their reliever inhaler — one puff at a time, up to 10
+        puffs. Repeat after 10 minutes if the ambulance has not arrived.
+    - step: 4
+      title: Swelling after food, sting, or medicine
+      instruction: >-
+        If the face or throat is swelling, this may be a severe allergy. If
+        the person carries an adrenaline injector, help them use it on the
+        outer thigh immediately.
+    - step: 5
+      title: Stay and watch
+      instruction: >-
+        Stay with them, keep them calm, and watch their breathing. If they
+        stop breathing, start chest compressions until help arrives.
+  do_not:
+    - Do not lie the person down or leave them alone.
+    - Do not give food or drink during severe breathlessness.
+    - Do not wait to see if it improves before calling for help.
+  monitor:
+    - Whether they can still speak, and how many words at a time
+    - Lip and face colour — blue or grey is danger
+    - Whether they stay awake and responsive
+  medical_follow_up:
+    required: true
+    reason: >-
+      Severe attacks need oxygen, nebulisation, and emergency medicines that
+      only a hospital can give.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

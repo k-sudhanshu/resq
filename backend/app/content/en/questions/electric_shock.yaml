@@ -1,0 +1,35 @@
+questions:
+  - id: shock_condition
+    text: How is the person right now?
+    options:
+      - id: awake_normal
+        text: Awake and behaving normally
+      - id: dizzy_or_pain
+        text: Dizzy, chest pain, or heartbeat feels irregular
+        escalates_to: CRITICAL
+      - id: unresponsive
+        text: Unconscious, or not responding properly
+        escalates_to: CRITICAL
+  - id: shock_source
+    text: What gave the shock?
+    options:
+      - id: household
+        text: A household plug, switch, or appliance
+        escalates_to: URGENT
+      - id: high_voltage
+        text: A power line, electric pole, or transformer
+        escalates_to: CRITICAL
+      - id: lightning
+        text: Lightning
+        escalates_to: CRITICAL
+  - id: shock_burns
+    text: Are there any burn marks on the body?
+    options:
+      - id: no_marks
+        text: No visible marks
+      - id: small_burn
+        text: A small burn where the current touched
+        escalates_to: URGENT
+      - id: large_or_two_burns
+        text: Deep burns, or burn marks at two different places
+        escalates_to: CRITICAL

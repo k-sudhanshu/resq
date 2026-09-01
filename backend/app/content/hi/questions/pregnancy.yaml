@@ -1,0 +1,48 @@
+questions:
+  - id: preg_what
+    text: अभी क्या हो रहा है?
+    options:
+      - id: labour_pains
+        text: नियमित प्रसव दर्द, या बच्चा आने वाला लग रहा है
+        escalates_to: URGENT
+      - id: bleeding
+        text: योनि से खून बह रहा है
+        escalates_to: CRITICAL
+      - id: waters_broke
+        text: पानी निकल गया है
+        escalates_to: URGENT
+      - id: baby_not_moving
+        text: बच्चा हिलना बंद हो गया है, या बहुत कम हिल रहा है
+        escalates_to: CRITICAL
+  - id: preg_danger
+    text: क्या इनमें से कोई ख़तरे का संकेत है?
+    options:
+      - id: none
+        text: इनमें से कुछ नहीं
+      - id: headache_vision
+        text: तेज़ सिरदर्द, धुंधला दिखना, या चेहरे-हाथों में अचानक सूजन
+        escalates_to: CRITICAL
+      - id: fit_or_unconscious
+        text: दौरा पड़ा, या पूरी तरह जाग नहीं रही
+        escalates_to: CRITICAL
+      - id: severe_pain
+        text: पेट में बहुत तेज़ दर्द जो प्रसव जैसा आ-जा कर नहीं होता
+        escalates_to: CRITICAL
+  - id: preg_months
+    text: गर्भ लगभग कितने महीने का है?
+    options:
+      - id: under_5
+        text: 5 महीने से कम
+        escalates_to: URGENT
+      - id: five_to_8
+        text: लगभग 5 से 8 महीने
+      - id: near_term
+        text: लगभग 9 महीने, या डिलीवरी करीब है
+  - id: preg_help
+    text: क्या अभी अस्पताल या दाई के पास जा सकती हैं?
+    options:
+      - id: yes_transport
+        text: हाँ, अभी निकल सकते हैं
+      - id: no_transport
+        text: नहीं, एम्बुलेंस चाहिए
+        escalates_to: CRITICAL

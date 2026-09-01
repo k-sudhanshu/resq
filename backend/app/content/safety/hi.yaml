@@ -1,0 +1,25 @@
+# Banned phrases for Hindi AI output.
+#
+# Written independently of en.yaml: these target unsafe advice that is common
+# in Hindi first-aid folklore (haldi, ghee, toothpaste on burns) rather than
+# being a literal translation of the English list.
+#
+# Same scope rules apply: only recommendation strings are scanned, and a
+# sentence containing a Hindi negation cue (न, नहीं, मत, बचें, कभी) is ignored,
+# so "जली जगह पर घी न लगाएं" is correctly treated as safe advice.
+banned_patterns:
+  - pattern: (पैरासिटामोल|पेरासिटामोल|आइबुप्रोफेन|एस्पिरिन|क्रोसिन|डोलो|कॉम्बिफ्लेम|एंटीबायोटिक|दर्द ?निवारक|पेनकिलर)
+    reason: medication_advice
+  - pattern: \d+\s*(मिलीग्राम|एमजी|एमएल|मिली|ग्राम|गोली|गोलियां|कैप्सूल|चम्मच|बूंद)
+    reason: dosage_advice
+  - pattern: (टूथपेस्ट|मक्खन|घी|सरसों का तेल|नारियल का तेल|हल्दी|गोबर|राख|मिट्टी का तेल|केरोसिन|कच्चा अंडा|नींबू का रस)
+    reason: harmful_home_remedy
+  - pattern: (बर्फ़|बर्फ)\s*(सीधे|का टुकड़ा|के टुकड़े|वाला पानी)?
+    reason: harmful_cooling_method
+  - pattern: (उल्टी करा|उल्टी करवा|उल्टी कराने)
+    reason: harmful_action
+  - pattern: (कसकर बांध|रस्सी से बांध|बेल्ट से बांध)
+    reason: untrained_technique
+  - pattern: (डॉक्टर की ज़रूरत नहीं|डॉक्टर की जरूरत नहीं|अस्पताल जाने की ज़रूरत नहीं|अस्पताल जाने की जरूरत नहीं|112 पर कॉल न कर|108 पर कॉल न कर)
+    reason: discourages_care
+    negation_exempt: true

@@ -1,0 +1,103 @@
+default:
+  risk_level: URGENT
+  summary: >-
+    Keep the injured part still and supported, and get an X-ray. Do not try to
+    straighten it yourself.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Stop them moving the injured part
+      instruction: >-
+        Tell the person to stay still. Support the injured limb in the position
+        they are already holding it.
+    - step: 2
+      title: Support it with padding
+      instruction: >-
+        Place rolled cloth, a towel, or cushions around the limb to stop it
+        moving. Support it by hand if you have nothing else.
+    - step: 3
+      title: Reduce swelling
+      instruction: >-
+        Hold a cold pack wrapped in a cloth against the area for up to 20
+        minutes. Never place ice directly on the skin.
+    - step: 4
+      title: Cover any wound
+      instruction: >-
+        If the skin is broken over the injury, cover it with a clean dressing
+        without pressing on the bone.
+    - step: 5
+      title: Get to a hospital
+      instruction: >-
+        Arrange transport to a hospital for an X-ray. Keep the limb supported
+        during the journey.
+  do_not:
+    - Do not try to straighten or push the bone back into place.
+    - Do not massage the injury or apply heat or oil.
+    - Do not let them eat or drink in case surgery is needed.
+    - Do not let them walk on an injured leg or ankle.
+  monitor:
+    - Fingers or toes below the injury turning cold, blue, or numb
+    - Pain or swelling getting quickly worse
+    - The person becoming faint, drowsy, or very pale
+  medical_follow_up:
+    required: true
+    reason: >-
+      Only an X-ray can confirm a fracture, and a broken bone needs setting and
+      immobilising by a clinician.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    This injury needs emergency help now. Call 112 or 108 and do not move the
+    person unless they are in danger.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately. Describe where the injury is and whether
+        the person is awake.
+    - step: 2
+      title: Do not move them
+      instruction: >-
+        Keep them exactly where they are, especially with a neck, back, head,
+        hip, or thigh injury. Move them only if there is immediate danger.
+    - step: 3
+      title: Support the head and neck
+      instruction: >-
+        If the neck or back may be injured, hold their head gently in line with
+        their body and tell them not to nod or turn.
+    - step: 4
+      title: Control any bleeding
+      instruction: >-
+        Press a clean cloth around a bleeding wound. If bone is visible, press
+        beside it, never directly on it.
+    - step: 5
+      title: Keep them warm and still
+      instruction: >-
+        Cover them with a blanket or coat, stay beside them, and keep talking
+        until the ambulance arrives.
+  do_not:
+    - Do not try to straighten the limb or push bone back in.
+    - Do not move a person with a suspected neck or back injury.
+    - Do not give anything to eat or drink.
+    - Do not remove a helmet if one is being worn.
+  monitor:
+    - Whether they stay awake and can answer you
+    - Breathing becoming fast, shallow, or noisy
+    - The limb below the injury turning cold, blue, or numb
+  medical_follow_up:
+    required: true
+    reason: >-
+      Injuries like these can damage blood vessels, nerves, or the spine and
+      need immediate hospital assessment.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

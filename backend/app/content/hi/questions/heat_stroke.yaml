@@ -1,0 +1,29 @@
+questions:
+  - id: heat_behaviour
+    text: मरीज़ का बर्ताव कैसा है?
+    options:
+      - id: tired_weak
+        text: थका, कमज़ोर, बहुत पसीना, सिरदर्द या ऐंठन
+        escalates_to: URGENT
+      - id: confused
+        text: उलझन में है, ज़बान लड़खड़ा रही है, या अजीब बर्ताव कर रहा है
+        escalates_to: CRITICAL
+      - id: unconscious
+        text: बेहोश हो गया, या जवाब नहीं दे रहा
+        escalates_to: CRITICAL
+  - id: heat_skin
+    text: उसकी त्वचा छूने पर कैसी लग रही है?
+    options:
+      - id: sweaty_and_cool
+        text: पसीने से भीगी, पीली, और ठंडी
+      - id: hot_and_dry
+        text: बहुत गरम और सूखी — पसीना आना बंद हो गया है
+        escalates_to: CRITICAL
+  - id: heat_drinking
+    text: क्या मरीज़ पानी पी पा रहा है?
+    options:
+      - id: drinking_fine
+        text: हां, घूंट-घूंट पानी पी रहा है
+      - id: vomiting_or_refusing
+        text: उल्टी हो रही है, या पी नहीं पा रहा
+        escalates_to: URGENT

@@ -1,0 +1,96 @@
+# Verified baseline guidance. Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Pregnancy problems need a clinic or hospital the same day. Keep her lying
+    on her left side, give sips of water if she wants, and do not delay travel.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Lie on the left side
+      instruction: >-
+        Help her lie on her left side with knees slightly bent. This helps
+        blood flow to the baby.
+    - step: 2
+      title: Note what you see
+      instruction: >-
+        Note bleeding, waters, pain timing, and how the baby is moving. Take
+        this information to the clinic.
+    - step: 3
+      title: Go to a hospital or midwife
+      instruction: >-
+        Leave now for the nearest hospital or skilled birth attendant. Do not
+        wait for pain to “settle”.
+    - step: 4
+      title: Keep her warm and calm
+      instruction: >-
+        Loosen tight clothes, keep her warm, and stay with her. Offer sips of
+        water if she is fully awake and not vomiting.
+  do_not:
+    - Do not give any medicine, herbs, or “home delivery” drugs.
+    - Do not push on the belly or try to pull the baby.
+    - Do not make her walk a long way if bleeding or in strong labour.
+  monitor:
+    - Bleeding becoming heavier
+    - A fit, severe headache, or she becomes less awake
+    - The baby stopping moving
+  medical_follow_up:
+    required: true
+    reason: >-
+      Only a clinic can check the mother and baby. Delay is dangerous in
+      pregnancy bleeding or reduced baby movement.
+  sources:
+    - mohfw_india
+    - nhs_first_aid
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    This is a pregnancy emergency. Call 112 or 108 now. Keep her on her left
+    side and do not give medicines.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 and say it is a pregnant woman with bleeding, a fit,
+        or the baby not moving. Put the phone on speaker.
+    - step: 2
+      title: Left side, knees bent
+      instruction: >-
+        Lie her on her left side. If she has a fit, keep her safe from injury
+        and do not put anything in her mouth.
+    - step: 3
+      title: If the baby is coming
+      instruction: >-
+        If the head is visible, stay calm, support the baby as it comes, and
+        do not pull. Keep the baby warm on the mother’s chest after birth.
+    - step: 4
+      title: Pad bleeding — do not pack inside
+      instruction: >-
+        If there is bleeding, put a clean cloth pad outside. Do not put
+        anything inside the vagina.
+    - step: 5
+      title: Stay until help arrives
+      instruction: >-
+        Keep her warm. Do not give food. Note the time symptoms started.
+  do_not:
+    - Do not give tablets or herbal medicines to “stop bleeding”.
+    - Do not pull the baby or cut the cord unless trained and help is far away.
+    - Do not sit her upright for a long time if she feels faint.
+  monitor:
+    - Amount of bleeding
+    - Whether she stays awake
+    - Breathing and any further fits
+  medical_follow_up:
+    required: true
+    reason: >-
+      Pregnancy bleeding, eclampsia, and labour complications need hospital
+      care immediately.
+  sources:
+    - mohfw_india
+    - nhs_first_aid

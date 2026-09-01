@@ -1,0 +1,35 @@
+questions:
+  - id: shock_condition
+    text: मरीज़ की हालत अभी कैसी है?
+    options:
+      - id: awake_normal
+        text: होश में है और सामान्य बर्ताव कर रहा है
+      - id: dizzy_or_pain
+        text: चक्कर, सीने में दर्द, या धड़कन अजीब लग रही है
+        escalates_to: CRITICAL
+      - id: unresponsive
+        text: बेहोश है, या ठीक से जवाब नहीं दे रहा
+        escalates_to: CRITICAL
+  - id: shock_source
+    text: झटका किस चीज़ से लगा?
+    options:
+      - id: household
+        text: घर के प्लग, स्विच, या किसी उपकरण से
+        escalates_to: URGENT
+      - id: high_voltage
+        text: बिजली की लाइन, खंभे, या ट्रांसफ़ॉर्मर से
+        escalates_to: CRITICAL
+      - id: lightning
+        text: आसमानी बिजली से
+        escalates_to: CRITICAL
+  - id: shock_burns
+    text: शरीर पर जलने के निशान हैं?
+    options:
+      - id: no_marks
+        text: कोई निशान नहीं दिख रहा
+      - id: small_burn
+        text: जहां करंट लगा, वहां छोटा सा जला निशान है
+        escalates_to: URGENT
+      - id: large_or_two_burns
+        text: गहरे जले निशान, या दो अलग जगहों पर निशान
+        escalates_to: CRITICAL

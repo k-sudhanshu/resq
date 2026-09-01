@@ -1,0 +1,20 @@
+name: Keep backend warm
+
+# Pings /health during Indian daytime hours so the free instance is already
+# awake for most real visits. Deliberately not every 5 minutes around the
+# clock: that wastes the free tier's monthly hours for no benefit at 3am.
+on:
+  schedule:
+    - cron: '*/10 2-17 * * *' # 07:30-23:00 IST
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping health endpoint
+        # `|| true`: a cold instance may time out on the first request, and a
+        # red cross on this workflow would be noise, not a signal.
+        run: |
+          curl --silent --show-error --max-time 30 \
+            "${{ secrets.API_BASE_URL }}/api/v1/health" || true

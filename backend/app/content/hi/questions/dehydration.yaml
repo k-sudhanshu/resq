@@ -1,0 +1,44 @@
+questions:
+  - id: dehy_cause
+    text: पानी की कमी किस वजह से हो रही है?
+    options:
+      - id: vomit_or_diarrhoea
+        text: उल्टी या दस्त
+      - id: heat_or_not_drinking
+        text: गर्मी, मेहनत, या पी नहीं रहे
+      - id: both
+        text: दोनों — बीमारी और कुछ पच नहीं रहा
+        escalates_to: URGENT
+  - id: dehy_signs
+    text: कौन-से संकेत दिख रहे हैं?
+    options:
+      - id: thirsty_only
+        text: प्यास, मुँह सूखा, पेशाब अभी हो रहा है
+      - id: little_urine
+        text: बहुत कम पेशाब, जीभ सूखी, आंखें धँसी
+        escalates_to: URGENT
+      - id: no_tears_drowsy
+        text: आँसू नहीं, बहुत ऊँघ, हाथ ठंडे, या कई घंटे से पेशाब नहीं
+        escalates_to: CRITICAL
+  - id: dehy_drink
+    text: क्या पी सकते हैं और पेट में रह जाता है?
+    options:
+      - id: can_drink
+        text: हाँ, घूँट ले रहे हैं और रह जाता है
+      - id: vomits_back
+        text: पीते ही उल्टी हो जाती है
+        escalates_to: URGENT
+      - id: cannot_drink
+        text: इतने कमज़ोर या ऊँघ रहे हैं कि पी नहीं सकते
+        escalates_to: CRITICAL
+  - id: dehy_who
+    text: तबीयत किसे ख़राब है?
+    options:
+      - id: older_child_adult
+        text: 1 साल से बड़ा बच्चा, या वयस्क
+      - id: baby
+        text: 1 साल से छोटा शिशु
+        escalates_to: URGENT
+      - id: elderly
+        text: बुज़ुर्ग
+        escalates_to: URGENT

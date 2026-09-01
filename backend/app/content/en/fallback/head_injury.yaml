@@ -1,0 +1,107 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Apply a cold compress to the bump and watch the person closely for the
+    next 24 hours. Vomiting, worsening headache, or unusual sleepiness means
+    hospital, immediately.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Sit them down and check
+      instruction: >-
+        Make the person rest and check how they respond. Ask simple questions
+        — their name, the day, what happened.
+    - step: 2
+      title: Cold compress on the bump
+      instruction: >-
+        Wrap ice or something cold in a cloth and hold it on the swelling for
+        up to 20 minutes at a time. Never put ice directly on skin.
+    - step: 3
+      title: Press gently on any cut
+      instruction: >-
+        For a bleeding cut, press a clean cloth on it. Scalp cuts bleed a lot
+        even when small.
+    - step: 4
+      title: Rest and watch for 24 hours
+      instruction: >-
+        Keep them resting and under watch for a day. Wake them once or twice
+        in the night to check they respond normally.
+    - step: 5
+      title: Know the danger signs
+      instruction: >-
+        Go to hospital at once if there is vomiting, worsening headache,
+        confusion, unusual sleepiness, or fluid from the ear or nose.
+  do_not:
+    - Do not give sleeping pills, alcohol, or strong painkillers.
+    - Do not leave the person alone for the first hours.
+    - Do not let them ride a vehicle or do heavy work today.
+  monitor:
+    - Vomiting, worsening headache, or blurred vision
+    - Confusion, slurred speech, or unusual sleepiness
+    - Blood or clear fluid from the ear or nose
+  medical_follow_up:
+    required: true
+    reason: >-
+      Bleeding inside the skull can start slowly. Any danger sign in the next
+      24-48 hours needs an immediate hospital visit.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    These signs can mean bleeding inside the skull. Call 112 or 108 now. Keep
+    the person still, and do not let them eat, drink, or sleep unattended.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately and describe how the injury happened. Put
+        the phone on speaker.
+    - step: 2
+      title: Keep the head and neck still
+      instruction: >-
+        After a fall from height or a road accident, assume a neck injury.
+        Hold the head steady with both hands and do not twist or lift the
+        person.
+    - step: 3
+      title: If unconscious but breathing
+      instruction: >-
+        Roll them gently onto their side, keeping the head, neck, and spine in
+        one line — ideally with two people moving them together.
+    - step: 4
+      title: Control bleeding without pressing hard
+      instruction: >-
+        Lay a clean cloth on a bleeding wound. If the skull may be broken,
+        press only around the wound, not on it.
+    - step: 5
+      title: Watch until help arrives
+      instruction: >-
+        Note whether they respond, vomit, or have a seizure, and tell the
+        ambulance team. If breathing stops, start chest compressions.
+  do_not:
+    - Do not move the person unnecessarily or let them stand and walk.
+    - Do not give food, water, or painkillers.
+    - Do not remove a helmet by force if it is stuck — wait for help.
+    - Do not press hard on a wound if the skull may be broken underneath.
+  monitor:
+    - Breathing, and whether they stay responsive
+    - Pupils — one bigger than the other is a danger sign
+    - Vomiting, seizures, or fluid from the ear or nose
+  medical_follow_up:
+    required: true
+    reason: >-
+      A scan is needed to rule out bleeding inside the skull — only a
+      hospital can do this.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

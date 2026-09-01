@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-surface text-onSurface font-sans text-body-md;
+  }
+
+  /* Devanagari sits taller than Latin at the same size, so Hindi needs a
+     little more room to stay comfortable at instruction sizes. */
+  html[lang='hi'] {
+    --resq-line-height-boost: 1.15;
+  }
+
+  html[lang='hi'] .instruction-text {
+    line-height: calc(1.5 * var(--resq-line-height-boost, 1));
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-surface;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg border border-outline-variant bg-surface-lowest p-5;
+  }
+
+  .btn-primary {
+    @apply flex min-h-touch w-full items-center justify-center gap-2 rounded-md
+      bg-primary-container px-5 text-primary-on transition-colors
+      hover:bg-primary disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-positive {
+    @apply flex min-h-touch w-full items-center justify-center gap-2 rounded-md
+      bg-tertiary-bright px-5 text-tertiary-on transition-colors
+      hover:bg-tertiary disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply flex min-h-touch w-full items-center justify-center gap-2 rounded-md
+      border border-outline-variant bg-secondary-container px-5 text-primary
+      transition-colors hover:bg-surface-high;
+  }
+
+  .btn-critical {
+    @apply flex min-h-touch w-full items-center justify-center gap-2 rounded-md
+      bg-critical px-5 text-lg font-bold text-critical-on transition-colors
+      hover:brightness-110;
+  }
+
+  /* Checkmarks on the analyzing screen appear one by one; a gentle pop makes
+     each completed stage feel like forward progress. */
+  .pop-in {
+    animation: resq-pop-in 0.35s ease-out both;
+  }
+
+  @keyframes resq-pop-in {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    70% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}

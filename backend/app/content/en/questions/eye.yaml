@@ -1,0 +1,41 @@
+questions:
+  - id: eye_what
+    text: What happened to the eye?
+    options:
+      - id: dust_or_object
+        text: Dust, an insect, or something small went in
+      - id: chemical
+        text: Soap, acid, pesticide, or another chemical
+        escalates_to: CRITICAL
+      - id: hit_or_cut
+        text: A blow, cut, or a sharp object
+        escalates_to: URGENT
+  - id: eye_vision
+    text: Can they see out of that eye?
+    options:
+      - id: sees_ok
+        text: Vision is almost normal, just watering or pain
+      - id: blurry
+        text: Blurry, double, or a dark patch
+        escalates_to: URGENT
+      - id: cannot_see
+        text: Cannot see, or the eye looks collapsed or cut open
+        escalates_to: CRITICAL
+  - id: eye_stuck
+    text: Is anything still stuck in the eye?
+    options:
+      - id: nothing_stuck
+        text: Nothing is stuck
+      - id: small_loose
+        text: Something loose that might wash out
+      - id: embedded
+        text: Something is stuck in the eyeball
+        escalates_to: CRITICAL
+  - id: eye_both
+    text: Is only one eye affected?
+    options:
+      - id: one_eye
+        text: One eye
+      - id: both_eyes
+        text: Both eyes
+        escalates_to: URGENT

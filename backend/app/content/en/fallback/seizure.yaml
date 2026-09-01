@@ -1,0 +1,109 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Protect the person from injury and let the seizure pass — do not hold
+    them down or put anything in their mouth. Afterwards, lie them on their
+    side and stay with them until they are fully awake.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Protect from injury
+      instruction: >-
+        Move hard or sharp objects away. Put something soft under the head,
+        like a folded cloth or bag.
+    - step: 2
+      title: Time the seizure
+      instruction: >-
+        Note when it started. Most seizures stop on their own within 2 to 3
+        minutes.
+    - step: 3
+      title: After it stops, turn them to the side
+      instruction: >-
+        Roll the person onto their side so saliva can drain and breathing
+        stays clear. Loosen anything tight around the neck.
+    - step: 4
+      title: Stay until fully awake
+      instruction: >-
+        Confusion and sleepiness are normal afterwards. Stay with them, speak
+        calmly, and do not give food or water until fully alert.
+    - step: 5
+      title: See a doctor
+      instruction: >-
+        Tell their doctor about the seizure — the medicine dose may need a
+        change. Keep a note of how long it lasted.
+  do_not:
+    - Do not hold the person down or try to stop the shaking.
+    - Do not put a spoon, cloth, fingers, or anything in their mouth.
+    - Do not make them smell an onion or a shoe — it does not help.
+    - Do not give food, water, or medicine until they are fully awake.
+  monitor:
+    - How long the seizure lasts — more than 5 minutes is an emergency
+    - Whether a second seizure starts
+    - Breathing and colour of the lips after the seizure
+  medical_follow_up:
+    required: true
+    reason: >-
+      Every seizure should be reported to a doctor to adjust treatment and
+      find triggers.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    A seizure lasting over 5 minutes, repeated seizures, a first-ever
+    seizure with danger signs, or a seizure in water is an emergency. Call
+    112 or 108 now.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately. Say how long the seizure has lasted.
+        Put the phone on speaker.
+    - step: 2
+      title: Keep protecting the head
+      instruction: >-
+        Keep hard objects away and something soft under the head while the
+        shaking continues.
+    - step: 3
+      title: Turn them to the side when possible
+      instruction: >-
+        As soon as the shaking allows, roll them onto their side so the
+        airway stays clear of saliva and vomit.
+    - step: 4
+      title: Check breathing after the seizure
+      instruction: >-
+        When the seizure stops, check breathing. If they are not breathing,
+        start chest compressions — push hard and fast in the centre of the
+        chest — until help arrives.
+    - step: 5
+      title: Stay and report
+      instruction: >-
+        Stay with them, note the timing of every seizure, and tell the
+        ambulance team exactly what you saw.
+  do_not:
+    - Do not put anything in the mouth or between the teeth.
+    - Do not hold the body down to stop the shaking.
+    - Do not give food, water, or medicine during or right after the seizure.
+    - Do not pour water on the person.
+  monitor:
+    - Whether the seizure stops or repeats
+    - Breathing and lip colour
+    - Whether the person starts responding after the seizure
+  medical_follow_up:
+    required: true
+    reason: >-
+      Prolonged or repeated seizures can damage the brain and need emergency
+      medicines that only hospitals have.
+  sources:
+    - nhs_first_aid
+    - indian_red_cross

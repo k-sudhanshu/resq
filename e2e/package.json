@@ -1,0 +1,13 @@
+{
+  "name": "resq-e2e",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "setup": "PLAYWRIGHT_BROWSERS_PATH=./browsers playwright install chromium",
+    "smoke": "PLAYWRIGHT_BROWSERS_PATH=./browsers node smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.57.0"
+  }
+}

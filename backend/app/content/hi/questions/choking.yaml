@@ -1,0 +1,37 @@
+questions:
+  - id: choking_airway
+    text: क्या मरीज़ बोल सकता है, खांस सकता है, या सांस ले सकता है?
+    options:
+      - id: coughing_forcefully
+        text: ज़ोर से खांस रहा है और बोल भी पा रहा है
+      - id: weak_cough
+        text: खांसी कमज़ोर है, ठीक से बोल नहीं पा रहा
+        escalates_to: CRITICAL
+      - id: cannot_breathe
+        text: सांस, खांसी, या आवाज़ कुछ भी नहीं निकल रही
+        escalates_to: CRITICAL
+  - id: choking_responsiveness
+    text: क्या मरीज़ होश में है?
+    options:
+      - id: awake
+        text: होश में है, खड़ा या बैठा है
+      - id: unresponsive
+        text: गिर गया है या जवाब नहीं दे रहा
+        escalates_to: CRITICAL
+  - id: choking_colour
+    text: होंठ और चेहरे का रंग कैसा है?
+    options:
+      - id: normal_colour
+        text: रंग सामान्य है
+      - id: blue_or_grey
+        text: नीला, स्लेटी, या बहुत पीला पड़ रहा है
+        escalates_to: CRITICAL
+  - id: choking_age_group
+    text: किसका दम घुट रहा है?
+    options:
+      - id: adult_or_child
+        text: बड़ा व्यक्ति या 1 साल से बड़ा बच्चा
+      - id: infant_under_one
+        text: 1 साल से छोटा शिशु
+      - id: pregnant_or_large_body
+        text: गर्भवती महिला या भारी शरीर वाला व्यक्ति

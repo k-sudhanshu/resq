@@ -1,0 +1,41 @@
+questions:
+  - id: diabetes_awake
+    text: क्या व्यक्ति पूरी तरह जाग रहा है और निगल सकता है?
+    options:
+      - id: awake_swallow
+        text: हाँ, पूरी तरह जाग रहा है और निगल सकता है
+      - id: drowsy
+        text: ऊँघ रहा है, कंफ़्यूज़ है, या सुरक्षित निगल नहीं सकता
+        escalates_to: CRITICAL
+      - id: unconscious
+        text: बेहोश है
+        escalates_to: CRITICAL
+  - id: diabetes_signs
+    text: कौन-से संकेत सबसे मिलते-जुलते हैं?
+    options:
+      - id: low_sugar
+        text: पसीना, काँपना, भूख, या अचानक कंफ़्यूज़न (शुगर गिर सकती है)
+        escalates_to: URGENT
+      - id: high_sugar
+        text: बहुत प्यास, बार-बार पेशाब, मुँह से मीठी गंध, या गहरी सांस
+        escalates_to: URGENT
+      - id: not_sure
+        text: पक्का नहीं — सिर्फ़ तबीयत ख़राब है और शुगर की बीमारी है
+        escalates_to: URGENT
+  - id: diabetes_known
+    text: क्या इंसुलिन या शुगर की गोली लेते हैं?
+    options:
+      - id: insulin
+        text: हाँ, इंसुलिन
+      - id: tablets
+        text: हाँ, गोली
+      - id: unknown_meds
+        text: पक्का नहीं
+  - id: diabetes_sugar
+    text: क्या अभी कुछ मीठा दे सकते हैं (अगर पूरी तरह जाग रहे हों)?
+    options:
+      - id: can_give
+        text: हाँ — चीनी, जूस, या मिठाई पास है
+      - id: cannot_give
+        text: नहीं, या निगल नहीं सकते
+        escalates_to: CRITICAL

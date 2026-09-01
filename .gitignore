@@ -1,0 +1,39 @@
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/*.egg-info/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+
+# Local database files (SQLite is the local-only default)
+**/*.db
+**/*.db-journal
+
+# Secrets — only .env.example is committed
+**/.env
+**/.env.local
+**/.env*.local
+!.env.example
+!**/.env.example
+
+# Node / Next.js
+**/node_modules/
+**/.next/
+**/out/
+**/next-env.d.ts
+**/*.tsbuildinfo
+
+# End-to-end test artefacts (browser binaries and captured screenshots)
+**/e2e/browsers/
+**/e2e/screenshots/
+e2e/browsers/
+e2e/screenshots/
+
+# OS / editor
+**/.DS_Store
+.DS_Store
+**/.idea/
+**/.vscode/
+

@@ -1,0 +1,33 @@
+questions:
+  - id: snake_condition
+    text: How is the person right now?
+    options:
+      - id: awake_ok
+        text: Awake, talking, breathing normally
+        escalates_to: URGENT
+      - id: swelling_fast
+        text: The bite area is swelling fast or turning dark
+        escalates_to: CRITICAL
+      - id: drowsy_or_bleeding
+        text: Drowsy, vomiting, drooping eyelids, or bleeding from the gums
+        escalates_to: CRITICAL
+  - id: snake_bite_look
+    text: What does the bite look like?
+    options:
+      - id: no_clear_marks
+        text: No clear marks and little pain
+        escalates_to: URGENT
+      - id: puncture_marks
+        text: One or two puncture marks
+        escalates_to: URGENT
+      - id: severe_pain
+        text: Severe pain, bleeding, or blistering at the bite
+        escalates_to: CRITICAL
+  - id: snake_movement
+    text: Has the person moved around since the bite?
+    options:
+      - id: kept_still
+        text: Kept still since the bite
+      - id: walked_or_ran
+        text: Walked, ran, or moved a lot
+        escalates_to: URGENT

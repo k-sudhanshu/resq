@@ -1,0 +1,40 @@
+questions:
+  - id: allergy_breathing
+    text: Is there trouble breathing, or swelling of the lips, tongue, or throat?
+    options:
+      - id: breathing_ok
+        text: Breathing is normal, no swelling of the mouth
+      - id: swelling_or_wheeze
+        text: Wheeze, tight chest, or lips/tongue/throat swelling
+        escalates_to: CRITICAL
+  - id: allergy_cause
+    text: What started this?
+    options:
+      - id: food_or_medicine
+        text: Food, medicine, or something they ate or took
+      - id: insect_sting
+        text: Insect bite or scorpion sting
+      - id: unknown
+        text: Not sure
+  - id: allergy_skin
+    text: What does the skin look like?
+    options:
+      - id: small_area
+        text: Itch or rash on a small area only
+      - id: spreading
+        text: Hives or rash spreading over the body
+        escalates_to: URGENT
+      - id: pale_or_blue
+        text: Skin is pale, grey, or they feel faint
+        escalates_to: CRITICAL
+  - id: allergy_known
+    text: Do they have a known severe allergy, or an adrenaline pen?
+    options:
+      - id: no_known
+        text: No known severe allergy
+      - id: has_pen
+        text: Yes — they have an adrenaline (epinephrine) pen
+        escalates_to: URGENT
+      - id: known_no_pen
+        text: Known severe allergy, but no pen here
+        escalates_to: URGENT

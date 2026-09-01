@@ -1,0 +1,42 @@
+questions:
+  - id: fracture_location
+    text: Which part of the body is injured?
+    options:
+      - id: arm_or_wrist
+        text: Arm, wrist, or hand
+      - id: leg_or_ankle
+        text: Leg, ankle, or foot
+        escalates_to: URGENT
+      - id: hip_or_thigh
+        text: Hip or thigh
+        escalates_to: CRITICAL
+      - id: spine_neck_or_head
+        text: Neck, back, or head
+        escalates_to: CRITICAL
+  - id: fracture_bone_exposed
+    text: Is the bone visible, or is there an open wound over the injury?
+    options:
+      - id: skin_intact
+        text: Skin is not broken
+      - id: open_wound
+        text: There is an open wound over the injury
+        escalates_to: URGENT
+      - id: bone_visible
+        text: Bone is sticking out
+        escalates_to: CRITICAL
+  - id: fracture_circulation
+    text: Below the injury, is the limb cold, blue, or numb?
+    options:
+      - id: normal_warm_sensation
+        text: Normal colour, warm, and can feel touch
+      - id: numb_or_cold
+        text: Cold, blue, or has no feeling
+        escalates_to: CRITICAL
+  - id: fracture_deformity
+    text: Does the injured part look bent or out of shape?
+    options:
+      - id: looks_normal
+        text: Looks normal — just swollen or painful (like a sprain)
+      - id: visible_deformity
+        text: Clearly bent, twisted, or out of shape
+        escalates_to: URGENT

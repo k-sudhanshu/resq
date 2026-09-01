@@ -1,0 +1,39 @@
+questions:
+  - id: faint_awake
+    text: Is the person awake now?
+    options:
+      - id: woke_quickly
+        text: Yes, woke up within a minute or two
+      - id: awake_but_confused
+        text: Awake, but confused or very weak
+        escalates_to: URGENT
+      - id: still_unconscious
+        text: No, still unconscious
+        escalates_to: CRITICAL
+  - id: faint_breathing
+    text: Is their breathing normal?
+    options:
+      - id: breathing_normal
+        text: Yes, breathing normally
+      - id: breathing_abnormal
+        text: No — gasping, noisy, or very slow breathing
+        escalates_to: CRITICAL
+  - id: faint_injury
+    text: Were they hurt while falling?
+    options:
+      - id: no_injury
+        text: No visible injury
+      - id: hit_head
+        text: They hit their head
+        escalates_to: URGENT
+      - id: bleeding_or_deformity
+        text: Bleeding, or an arm/leg looks bent or broken
+        escalates_to: URGENT
+  - id: faint_repeat
+    text: Has this happened recently before?
+    options:
+      - id: first_time
+        text: No, first time
+      - id: happened_before
+        text: Yes, fainted more than once recently
+        escalates_to: URGENT

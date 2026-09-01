@@ -1,0 +1,44 @@
+questions:
+  - id: dehy_cause
+    text: What is causing the fluid loss?
+    options:
+      - id: vomit_or_diarrhoea
+        text: Vomiting or diarrhoea
+      - id: heat_or_not_drinking
+        text: Heat, hard work, or they are not drinking
+      - id: both
+        text: Both — sickness and not keeping fluids down
+        escalates_to: URGENT
+  - id: dehy_signs
+    text: Which signs do you see?
+    options:
+      - id: thirsty_only
+        text: Thirsty, dry mouth, still passing urine
+      - id: little_urine
+        text: Very little urine, dry tongue, sunken eyes
+        escalates_to: URGENT
+      - id: no_tears_drowsy
+        text: No tears, very drowsy, cold hands, or no urine for many hours
+        escalates_to: CRITICAL
+  - id: dehy_drink
+    text: Can they drink and keep fluids down?
+    options:
+      - id: can_drink
+        text: Yes, they can sip and keep it down
+      - id: vomits_back
+        text: They vomit it back up
+        escalates_to: URGENT
+      - id: cannot_drink
+        text: Too weak or drowsy to drink
+        escalates_to: CRITICAL
+  - id: dehy_who
+    text: Who is unwell?
+    options:
+      - id: older_child_adult
+        text: A child over 1 year, or an adult
+      - id: baby
+        text: A baby under 1 year
+        escalates_to: URGENT
+      - id: elderly
+        text: An elderly person
+        escalates_to: URGENT

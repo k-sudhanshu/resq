@@ -1,0 +1,97 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Move the person to shade, cool them with water and fanning, and give sips
+    of water or ORS. If they do not improve in 30 minutes, or become confused,
+    treat it as an emergency.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Move them out of the heat
+      instruction: >-
+        Take the person to shade or a cool room immediately. Lie them down
+        and raise their feet slightly.
+    - step: 2
+      title: Loosen and cool
+      instruction: >-
+        Loosen tight clothing. Sponge the body with cool water, or put wet
+        cloths on the neck, armpits, and groin. Fan them continuously.
+    - step: 3
+      title: Give fluids in sips
+      instruction: >-
+        If they are fully awake, give sips of water, ORS, or lemon water
+        with salt and sugar. Small sips, again and again.
+    - step: 4
+      title: Watch for 30 minutes
+      instruction: >-
+        Keep cooling and watching. They should start feeling better within
+        30 minutes. If not, or if they worsen, get emergency help.
+  do_not:
+    - Do not give alcohol, tea, or coffee.
+    - Do not leave them alone in the heat or in a parked vehicle.
+    - Do not pour ice-cold water suddenly over the whole body.
+  monitor:
+    - Whether they become confused or their speech slurs
+    - Skin turning very hot and dry, with sweating stopped
+    - Vomiting, or being unable to drink
+  medical_follow_up:
+    required: true
+    reason: >-
+      Heat exhaustion can progress to heatstroke. A doctor should check anyone
+      who needed cooling, especially children and the elderly.
+  sources:
+    - nhs_first_aid
+    - mohfw_india
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    This looks like heatstroke — the body has stopped cooling itself. It can
+    be fatal. Call 112 or 108 now and cool the person aggressively while you
+    wait.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately and say it is heatstroke. Put the phone
+        on speaker.
+    - step: 2
+      title: Cool them fast
+      instruction: >-
+        Move them to shade. Pour cool water over the body, cover them with
+        wet sheets, and fan hard. Put wet cloths on the neck, armpits, and
+        groin.
+    - step: 3
+      title: Position them safely
+      instruction: >-
+        If they are unconscious but breathing, roll them onto their side.
+        If they are awake, lie them flat with feet slightly raised.
+    - step: 4
+      title: Keep cooling until help arrives
+      instruction: >-
+        Do not stop the cooling. Keep changing the wet cloths and fanning
+        until the ambulance arrives.
+  do_not:
+    - Do not give anything to drink if they are confused or drowsy.
+    - Do not give paracetamol or aspirin — they do not help heatstroke.
+    - Do not stop cooling because they shiver or seem to improve.
+  monitor:
+    - Breathing, and whether they stay responsive
+    - Body heat — whether the skin is cooling down
+    - Any seizure or vomiting
+  medical_follow_up:
+    required: true
+    reason: >-
+      Heatstroke damages the brain, kidneys, and heart. Hospital treatment is
+      essential even if the person seems to recover.
+  sources:
+    - nhs_first_aid
+    - mohfw_india

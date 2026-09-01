@@ -1,0 +1,37 @@
+questions:
+  - id: stroke_face
+    text: उनसे मुस्कुराने को कहें। क्या चेहरे का एक तरफ़ लटक रहा है?
+    options:
+      - id: face_even
+        text: दोनों तरफ़ एक जैसा दिखता है
+      - id: face_droop
+        text: एक तरफ़ लटक रही है या टेढ़ी लगती है
+        escalates_to: CRITICAL
+  - id: stroke_arms
+    text: दोनों बाँहें उठाने को कहें। क्या होता है?
+    options:
+      - id: arms_ok
+        text: दोनों बाँहें ऊपर रहती हैं
+      - id: arm_drops
+        text: एक बाँह गिर जाती है या उठ नहीं पाती
+        escalates_to: CRITICAL
+  - id: stroke_speech
+    text: एक सादा वाक्य बोलने को कहें। कैसे बोलते हैं?
+    options:
+      - id: speech_clear
+        text: बोल साफ़ है और समझ आता है
+      - id: speech_slurred
+        text: बोल लड़खड़ाता है, अजीब है, या बोल नहीं पाते
+        escalates_to: CRITICAL
+  - id: stroke_time
+    text: यह कब शुरू हुआ?
+    options:
+      - id: just_now
+        text: पिछले एक घंटे में
+        escalates_to: CRITICAL
+      - id: few_hours
+        text: कुछ घंटे पहले
+        escalates_to: CRITICAL
+      - id: not_sure
+        text: पक्का नहीं, या सोकर ऐसे ही उठे
+        escalates_to: CRITICAL

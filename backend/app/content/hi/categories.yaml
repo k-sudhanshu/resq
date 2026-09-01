@@ -1,0 +1,69 @@
+# Keys and their order must match content/en/categories.yaml exactly.
+# Only `label` is translated.
+categories:
+  - key: burn
+    label: जलना
+    icon: local_fire_department
+  - key: cut
+    label: कटना या खून बहना
+    icon: water_drop
+  - key: fracture
+    label: हड्डी टूटना या मोच
+    icon: personal_injury
+  - key: choking
+    label: दम घुटना
+    icon: air
+  - key: poisoning
+    label: ज़हर
+    icon: coronavirus
+  - key: snake_bite
+    label: सांप का काटना
+    icon: pest_control
+  - key: animal_bite
+    label: कुत्ते या जानवर का काटना
+    icon: pets
+  - key: electric_shock
+    label: बिजली का झटका
+    icon: bolt
+  - key: heat_stroke
+    label: लू लगना
+    icon: sunny
+  - key: fainting
+    label: बेहोशी या बेहोश
+    icon: falling
+  - key: seizure
+    label: दौरा (मिर्गी)
+    icon: neurology
+  - key: drowning
+    label: डूबना
+    icon: pool
+  - key: chest_pain
+    label: सीने में दर्द
+    icon: cardiology
+  - key: breathing
+    label: सांस की दिक्कत
+    icon: pulmonology
+  - key: head_injury
+    label: सिर की चोट
+    icon: psychology
+  - key: pregnancy
+    label: गर्भावस्था आपात
+    icon: pregnant_woman
+  - key: stroke
+    label: स्ट्रोक
+    icon: accessibility
+  - key: allergy
+    label: एलर्जी
+    icon: emergency
+  - key: diabetes
+    label: शुगर इमरजेंसी
+    icon: bloodtype
+  - key: fever
+    label: तेज़ बुखार
+    icon: device_thermostat
+  - key: eye
+    label: आंख की चोट
+    icon: visibility
+  - key: dehydration
+    label: पानी की कमी
+    icon: local_drink

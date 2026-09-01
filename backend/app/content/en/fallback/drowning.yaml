@@ -1,0 +1,107 @@
+# Verified baseline guidance, served when the AI is unavailable (`default`)
+# or when a hard rule escalates before any AI call (`critical`).
+# The Hindi file must mirror the structure exactly.
+default:
+  risk_level: URGENT
+  summary: >-
+    Even after the person seems fine, water in the lungs can cause trouble
+    hours later. Keep them warm, watch their breathing, and have a doctor
+    check them the same day.
+  emergency:
+    call_112: false
+    call_108: false
+  immediate_actions:
+    - step: 1
+      title: Get them out safely
+      instruction: >-
+        Reach with a stick, rope, or cloth, or throw something that floats.
+        Enter the water only if you are a strong swimmer and it is safe.
+    - step: 2
+      title: Let them cough the water out
+      instruction: >-
+        Coughing is good — it clears the airway. Sit them up slightly and let
+        them cough. Do not press the stomach to force water out.
+    - step: 3
+      title: Remove wet clothes and warm them
+      instruction: >-
+        Take off wet clothing and wrap them in dry cloth or a blanket, head
+        covered too.
+    - step: 4
+      title: Watch their breathing
+      instruction: >-
+        Stay with them and watch for fast breathing, coughing that will not
+        stop, or unusual tiredness.
+    - step: 5
+      title: See a doctor today
+      instruction: >-
+        Have a doctor check them the same day, even if they seem completely
+        fine — lung trouble can appear hours later.
+  do_not:
+    - Do not hang the person upside down or press the stomach to remove water.
+    - Do not leave them alone in the first hours after the incident.
+    - Do not give alcohol or hot drinks to "warm them up".
+  monitor:
+    - Breathing getting faster or noisier over the next hours
+    - Coughing that continues, or frothy spit
+    - Unusual sleepiness, confusion, or vomiting
+  medical_follow_up:
+    required: true
+    reason: >-
+      Inhaled water can inflame the lungs hours later ("secondary drowning"),
+      so a same-day medical check is essential.
+  sources:
+    - who_drowning
+    - nhs_first_aid
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    This is a drowning emergency. Call 112 or 108 now. If the person is not
+    breathing, start chest compressions immediately and do not stop until
+    help arrives.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 immediately, or shout for someone to call while you
+        help. Put the phone on speaker.
+    - step: 2
+      title: Rescue without becoming a victim
+      instruction: >-
+        If they are still in the water, reach with a stick or rope or throw a
+        float. Do not jump in unless you are trained — many rescuers drown.
+    - step: 3
+      title: Check breathing
+      instruction: >-
+        On dry ground, tilt the head back and check breathing for up to 10
+        seconds.
+    - step: 4
+      title: Not breathing — start CPR
+      instruction: >-
+        Give chest compressions in the centre of the chest, hard and fast,
+        about twice per second. If you know how, give rescue breaths too —
+        they matter in drowning. Continue until help arrives.
+    - step: 5
+      title: Breathing — recovery position
+      instruction: >-
+        If they are breathing, roll them onto their side, remove wet clothes,
+        and cover them to keep warm. Stay and re-check breathing every minute.
+  do_not:
+    - Do not waste time trying to press or drain water out of the lungs.
+    - Do not stop compressions to warm or dry the person.
+    - Do not give anything to eat or drink.
+  monitor:
+    - Breathing — whether it starts, stops, or changes
+    - Whether they respond to voice or touch
+    - Body temperature — keep them covered and warm
+  medical_follow_up:
+    required: true
+    reason: >-
+      Anyone rescued from drowning needs hospital observation, even after a
+      successful rescue.
+  sources:
+    - who_drowning
+    - nhs_first_aid

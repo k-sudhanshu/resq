@@ -1,0 +1,29 @@
+questions:
+  - id: heat_behaviour
+    text: How is the person behaving?
+    options:
+      - id: tired_weak
+        text: Tired, weak, sweating a lot, headache or cramps
+        escalates_to: URGENT
+      - id: confused
+        text: Confused, slurring words, or behaving strangely
+        escalates_to: CRITICAL
+      - id: unconscious
+        text: Fainted, or not responding
+        escalates_to: CRITICAL
+  - id: heat_skin
+    text: How does their skin feel?
+    options:
+      - id: sweaty_and_cool
+        text: Sweaty, pale, and cool to touch
+      - id: hot_and_dry
+        text: Very hot and dry — sweating has stopped
+        escalates_to: CRITICAL
+  - id: heat_drinking
+    text: Can the person drink water?
+    options:
+      - id: drinking_fine
+        text: Yes, drinking sips of water
+      - id: vomiting_or_refusing
+        text: Vomiting, or unable to drink
+        escalates_to: URGENT

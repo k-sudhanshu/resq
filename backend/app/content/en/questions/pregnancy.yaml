@@ -1,0 +1,48 @@
+questions:
+  - id: preg_what
+    text: What is happening right now?
+    options:
+      - id: labour_pains
+        text: Regular labour pains, or the baby may be coming
+        escalates_to: URGENT
+      - id: bleeding
+        text: Bleeding from the vagina
+        escalates_to: CRITICAL
+      - id: waters_broke
+        text: The waters have broken
+        escalates_to: URGENT
+      - id: baby_not_moving
+        text: The baby has stopped moving, or is moving much less
+        escalates_to: CRITICAL
+  - id: preg_danger
+    text: Any of these danger signs?
+    options:
+      - id: none
+        text: None of these
+      - id: headache_vision
+        text: Severe headache, blurred vision, or sudden swelling of face and hands
+        escalates_to: CRITICAL
+      - id: fit_or_unconscious
+        text: A fit, or she is not fully awake
+        escalates_to: CRITICAL
+      - id: severe_pain
+        text: Severe belly pain that does not come and go like labour
+        escalates_to: CRITICAL
+  - id: preg_months
+    text: About how many months pregnant?
+    options:
+      - id: under_5
+        text: Less than 5 months
+        escalates_to: URGENT
+      - id: five_to_8
+        text: About 5 to 8 months
+      - id: near_term
+        text: About 9 months, or due date is near
+  - id: preg_help
+    text: Can she get to a hospital or midwife now?
+    options:
+      - id: yes_transport
+        text: Yes, we can leave now
+      - id: no_transport
+        text: No, we need an ambulance
+        escalates_to: CRITICAL

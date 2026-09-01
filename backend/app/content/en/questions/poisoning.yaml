@@ -1,0 +1,48 @@
+questions:
+  - id: poisoning_responsiveness
+    text: How is the person behaving right now?
+    options:
+      - id: alert_and_normal
+        text: Awake and behaving normally
+        escalates_to: URGENT
+      - id: drowsy_or_confused
+        text: Drowsy, confused, or vomiting repeatedly
+        escalates_to: CRITICAL
+      - id: unresponsive_or_seizing
+        text: Not responding, or having a fit
+        escalates_to: CRITICAL
+  - id: poisoning_breathing
+    text: Is their breathing normal?
+    options:
+      - id: breathing_normal
+        text: Breathing normally
+      - id: breathing_difficult
+        text: Struggling to breathe, or breathing very slowly
+        escalates_to: CRITICAL
+  - id: poisoning_substance
+    text: What did they swallow, breathe in, or touch?
+    options:
+      - id: medicine_overdose
+        text: Too much medicine
+        escalates_to: URGENT
+      - id: cleaning_or_chemical
+        text: Cleaning product, acid, or other chemical
+        escalates_to: URGENT
+      - id: pesticide
+        text: Pesticide or insect/rat poison
+        escalates_to: CRITICAL
+      - id: plant_or_spoiled_food
+        text: Plant, mushroom, or spoiled food
+        escalates_to: URGENT
+      - id: unknown_substance
+        text: Not sure what it was
+        escalates_to: URGENT
+  - id: poisoning_time
+    text: When did this happen?
+    options:
+      - id: within_last_hour
+        text: Within the last hour
+      - id: more_than_hour_ago
+        text: More than an hour ago
+      - id: time_unknown
+        text: Not sure

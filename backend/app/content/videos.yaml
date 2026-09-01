@@ -1,0 +1,74 @@
+# Category -> language -> provider video id.
+# The backend picks the video, never the AI, so a model cannot invent a URL.
+# Left null until a specific video has been reviewed for medical accuracy in
+# that language; the result screen simply omits the video card when null.
+videos:
+  burn:
+    en: null
+    hi: null
+  cut:
+    en: null
+    hi: null
+  fracture:
+    en: null
+    hi: null
+  choking:
+    en: null
+    hi: null
+  poisoning:
+    en: null
+    hi: null
+  snake_bite:
+    en: null
+    hi: null
+  animal_bite:
+    en: null
+    hi: null
+  electric_shock:
+    en: null
+    hi: null
+  heat_stroke:
+    en: null
+    hi: null
+  fainting:
+    en: null
+    hi: null
+  seizure:
+    en: null
+    hi: null
+  drowning:
+    en: null
+    hi: null
+  chest_pain:
+    en: null
+    hi: null
+  breathing:
+    en: null
+    hi: null
+  head_injury:
+    en: null
+    hi: null
+  pregnancy:
+    en: null
+    hi: null
+  stroke:
+    en: null
+    hi: null
+  allergy:
+    en: null
+    hi: null
+  diabetes:
+    en: null
+    hi: null
+  fever:
+    en: null
+    hi: null
+  eye:
+    en: null
+    hi: null
+  dehydration:
+    en: null
+    hi: null
+  other:
+    en: null
+    hi: null

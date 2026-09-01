@@ -1,0 +1,35 @@
+questions:
+  - id: breath_severity
+    text: How bad is the breathing right now?
+    options:
+      - id: full_sentences
+        text: Can still speak full sentences
+        escalates_to: URGENT
+      - id: few_words
+        text: Can speak only a few words at a time
+        escalates_to: CRITICAL
+      - id: blue_or_silent
+        text: Lips turning blue, or too breathless to speak
+        escalates_to: CRITICAL
+  - id: breath_cause
+    text: Does the person have a known breathing illness?
+    options:
+      - id: asthma_with_inhaler
+        text: Yes — asthma, and their inhaler is nearby
+      - id: no_known_illness
+        text: No known breathing illness
+        escalates_to: URGENT
+      - id: allergy_swelling
+        text: Face, lips, or throat swelling after food, a sting, or medicine
+        escalates_to: CRITICAL
+  - id: breath_onset
+    text: How did it start?
+    options:
+      - id: gradually
+        text: Slowly, over hours or days
+      - id: suddenly
+        text: Suddenly, within minutes
+        escalates_to: CRITICAL
+      - id: after_choking
+        text: After food or an object went down the wrong way
+        escalates_to: CRITICAL

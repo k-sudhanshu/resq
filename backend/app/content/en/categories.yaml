@@ -1,0 +1,69 @@
+# Display order here is the display order in the landing grid.
+# The Hindi file must declare the same keys in the same order.
+categories:
+  - key: burn
+    label: Burn
+    icon: local_fire_department
+  - key: cut
+    label: Cut or bleeding
+    icon: water_drop
+  - key: fracture
+    label: Broken bone or sprain
+    icon: personal_injury
+  - key: choking
+    label: Choking
+    icon: air
+  - key: poisoning
+    label: Poisoning
+    icon: coronavirus
+  - key: snake_bite
+    label: Snake bite
+    icon: pest_control
+  - key: animal_bite
+    label: Dog or animal bite
+    icon: pets
+  - key: electric_shock
+    label: Electric shock
+    icon: bolt
+  - key: heat_stroke
+    label: Heatstroke
+    icon: sunny
+  - key: fainting
+    label: Fainting or unconscious
+    icon: falling
+  - key: seizure
+    label: Seizure (fits)
+    icon: neurology
+  - key: drowning
+    label: Drowning
+    icon: pool
+  - key: chest_pain
+    label: Chest pain
+    icon: cardiology
+  - key: breathing
+    label: Breathing difficulty
+    icon: pulmonology
+  - key: head_injury
+    label: Head injury
+    icon: psychology
+  - key: pregnancy
+    label: Pregnancy emergency
+    icon: pregnant_woman
+  - key: stroke
+    label: Stroke
+    icon: accessibility
+  - key: allergy
+    label: Allergic reaction
+    icon: emergency
+  - key: diabetes
+    label: Diabetic emergency
+    icon: bloodtype
+  - key: fever
+    label: High fever
+    icon: device_thermostat
+  - key: eye
+    label: Eye injury
+    icon: visibility
+  - key: dehydration
+    label: Dehydration
+    icon: local_drink

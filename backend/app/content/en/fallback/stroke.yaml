@@ -1,0 +1,94 @@
+default:
+  risk_level: CRITICAL
+  summary: >-
+    A possible stroke is always an emergency. Call 112 or 108 now. Note the
+    time it started. Do not give food, drink, or aspirin.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call for help now
+      instruction: >-
+        Call 112 or 108 and say you think it is a stroke. Say when it started.
+    - step: 2
+      title: Keep them still and supported
+      instruction: >-
+        Help them sit or lie with the head slightly raised and supported. Do
+        not let them walk.
+    - step: 3
+      title: Loosen clothing
+      instruction: >-
+        Loosen the collar and anything tight. Stay with them and keep them
+        calm.
+    - step: 4
+      title: If they become unconscious
+      instruction: >-
+        If they are not fully awake, lie them on their side (recovery
+        position) so the airway stays open — unless you suspect a neck injury.
+  do_not:
+    - Do not give food, drink, or medicines — swallowing may be unsafe.
+    - Do not give aspirin unless a doctor tells you to.
+    - Do not wait to see if it “passes”.
+  monitor:
+    - Face, arm, and speech getting worse
+    - Whether they stay awake
+    - Breathing
+  medical_follow_up:
+    required: true
+    reason: >-
+      Stroke treatment works best in the first hours. Hospital is the only
+      safe next step.
+  sources:
+    - nhs_first_aid
+    - mohfw_india
+
+critical:
+  risk_level: CRITICAL
+  summary: >-
+    Face droop, weak arm, or slurred speech means call 112 or 108 immediately.
+    Do not give anything by mouth.
+  emergency:
+    call_112: true
+    call_108: true
+  immediate_actions:
+    - step: 1
+      title: Call 112 or 108 now
+      instruction: >-
+        Tell them the time symptoms started and the FAST signs you saw (face,
+        arm, speech).
+    - step: 2
+      title: Support the head
+      instruction: >-
+        Sit or lie them with the head and shoulders slightly raised. Do not
+        let them stand or walk.
+    - step: 3
+      title: Nothing by mouth
+      instruction: >-
+        No water, tea, food, or tablets. The throat may not work safely.
+    - step: 4
+      title: Recovery position if needed
+      instruction: >-
+        If they become unresponsive but are breathing, roll them onto their
+        side.
+    - step: 5
+      title: Be ready for CPR
+      instruction: >-
+        If they stop breathing normally, start chest compressions until help
+        arrives.
+  do_not:
+    - Do not give aspirin on your own for a suspected stroke.
+    - Do not drive them yourself unless there is truly no ambulance.
+    - Do not leave them alone.
+  monitor:
+    - Worsening weakness or speech
+    - Level of response
+    - Breathing
+  medical_follow_up:
+    required: true
+    reason: >-
+      Hospital teams can give clot-busting treatment only if the person
+      arrives quickly.
+  sources:
+    - nhs_first_aid
+    - mohfw_india

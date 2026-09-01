@@ -1,0 +1,39 @@
+# Language-neutral: one id and url, with a label per language.
+# Only ids listed here may appear in guidance; anything else is dropped by
+# the output guard, so the AI cannot invent references.
+sources:
+  - id: who_burns
+    url: https://www.who.int/news-room/fact-sheets/detail/burns
+    labels:
+      en: World Health Organization — Burns
+      hi: विश्व स्वास्थ्य संगठन — जलने की जानकारी
+  - id: nhs_first_aid
+    url: https://www.nhs.uk/conditions/first-aid/
+    labels:
+      en: NHS — First aid
+      hi: NHS — फ़र्स्ट एड जानकारी
+  - id: indian_red_cross
+    url: https://indianredcross.org/
+    labels:
+      en: Indian Red Cross Society
+      hi: भारतीय रेड क्रॉस सोसाइटी
+  - id: mohfw_india
+    url: https://www.mohfw.gov.in/
+    labels:
+      en: Ministry of Health and Family Welfare, India
+      hi: स्वास्थ्य एवं परिवार कल्याण मंत्रालय, भारत
+  - id: who_snakebite
+    url: https://www.who.int/news-room/fact-sheets/detail/snakebite-envenoming
+    labels:
+      en: World Health Organization — Snakebite
+      hi: विश्व स्वास्थ्य संगठन — सांप के काटने की जानकारी
+  - id: who_animal_bites
+    url: https://www.who.int/news-room/fact-sheets/detail/animal-bites
+    labels:
+      en: World Health Organization — Animal bites
+      hi: विश्व स्वास्थ्य संगठन — जानवर के काटने की जानकारी
+  - id: who_drowning
+    url: https://www.who.int/news-room/fact-sheets/detail/drowning
+    labels:
+      en: World Health Organization — Drowning
+      hi: विश्व स्वास्थ्य संगठन — डूबने की जानकारी

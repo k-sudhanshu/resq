@@ -1,0 +1,41 @@
+questions:
+  - id: diabetes_awake
+    text: Is the person fully awake and able to swallow?
+    options:
+      - id: awake_swallow
+        text: Yes, fully awake and can swallow
+      - id: drowsy
+        text: Drowsy, confused, or cannot swallow safely
+        escalates_to: CRITICAL
+      - id: unconscious
+        text: Unconscious
+        escalates_to: CRITICAL
+  - id: diabetes_signs
+    text: Which signs are closest?
+    options:
+      - id: low_sugar
+        text: Sweating, shaky, hungry, or sudden confusion (possible low sugar)
+        escalates_to: URGENT
+      - id: high_sugar
+        text: Very thirsty, passing a lot of urine, fruity breath, or deep breathing
+        escalates_to: URGENT
+      - id: not_sure
+        text: Not sure — just unwell and known to have diabetes
+        escalates_to: URGENT
+  - id: diabetes_known
+    text: Do they take insulin or diabetes tablets?
+    options:
+      - id: insulin
+        text: Yes, insulin
+      - id: tablets
+        text: Yes, tablets
+      - id: unknown_meds
+        text: Not sure
+  - id: diabetes_sugar
+    text: Can you give something sweet right now (if they are fully awake)?
+    options:
+      - id: can_give
+        text: Yes — sugar, juice, or sweets are at hand
+      - id: cannot_give
+        text: No, or they cannot swallow
+        escalates_to: CRITICAL
