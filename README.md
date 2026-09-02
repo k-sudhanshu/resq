@@ -5,7 +5,7 @@
 ### Someone is hurt. This walks you through what to do.
 
 <img src="https://img.shields.io/badge/English-002c57?style=for-the-badge" alt="English" />
-<img src="https://img.shields.io/badge/हिंदी-2D6A4F?style=for-the-badge" alt="Hindi" />
+<img src="https://img.shields.io/badge/HINDI-2D6A4F?style=for-the-badge" alt="Hindi" />
 <img src="https://img.shields.io/badge/22_emergencies-40916C?style=for-the-badge" alt="22 emergencies" />
 <img src="https://img.shields.io/badge/112_·_108-BA1A1A?style=for-the-badge" alt="Emergency numbers" />
 <img src="https://img.shields.io/badge/Works_when_AI_is_down-1B4332?style=for-the-badge" alt="Works offline from AI" />
