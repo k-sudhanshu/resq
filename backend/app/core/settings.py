@@ -28,8 +28,9 @@ class Settings(BaseSettings):
             v = "postgresql+asyncpg://" + v[len("postgresql://"):]
         # asyncpg requires ssl= instead of sslmode=
         v = v.replace("sslmode=", "ssl=")
-        v = v.replace("&channel_binding=require", "").replace("?channel_binding=require", "?").rstrip("?")
-        return v
+        v = v.replace("&channel_binding=require", "")
+        v = v.replace("?channel_binding=require", "?")
+        return v.rstrip("?")
 
     ai_provider: Literal["mock", "gemini"] = "mock"
     gemini_api_key: str = ""
