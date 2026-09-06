@@ -73,10 +73,22 @@
   },
   "analyzing": {
     "title": "Working out what to do",
+    "subtitle": "Preparing the right first-aid steps from what you told us.",
     "checking": "Checking the answers you gave",
+    "checkingDetail": "Reading the symptoms and answers you shared",
     "consulting": "Preparing first-aid steps",
+    "consultingDetail": "Matching first-aid steps to this situation",
     "verifying": "Running safety checks",
-    "reassure": "You are doing the right thing by getting help."
+    "verifyingDetail": "Checking for actions that could make things worse",
+    "generating": "Generating a step-by-step plan",
+    "generatingDetail": "Putting the steps in a clear order",
+    "statusDone": "Done",
+    "statusWorking": "Working",
+    "statusNext": "Next",
+    "reassure": "You are doing the right thing by getting help.",
+    "reassureStay": "Stay nearby. The steps will appear on their own.",
+    "emergencyPrompt": "Condition severe or getting worse?",
+    "callEmergency": "Call 112 / 108"
   },
   "result": {
     "criticalBanner": "Emergency — call for help now",

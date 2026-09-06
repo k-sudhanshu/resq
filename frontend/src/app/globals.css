@@ -74,4 +74,54 @@
       opacity: 1;
     }
   }
+
+  .analyze-pulse-ring {
+    animation: resq-analyze-pulse 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .analyze-ecg {
+    stroke-dasharray: 240;
+    animation: resq-analyze-ecg 2.8s linear infinite;
+  }
+
+  .analyze-float {
+    animation: resq-analyze-float 4s ease-in-out infinite;
+  }
+
+  @keyframes resq-analyze-pulse {
+    0% {
+      transform: scale(0.92);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(0.92);
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes resq-analyze-ecg {
+    0% {
+      stroke-dashoffset: 240;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -240;
+    }
+  }
+
+  @keyframes resq-analyze-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
 }
