@@ -124,4 +124,23 @@
       transform: translateY(-4px);
     }
   }
+
+  .consent-pulse-ring {
+    animation: resq-consent-pulse 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  }
+
+  @keyframes resq-consent-pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.45);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 8px rgba(220, 38, 38, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+    }
+  }
 }

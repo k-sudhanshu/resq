@@ -65,6 +65,7 @@ test('hindi values are actually translated, not copied from english', () => {
   const allowedIdentical = new Set([
     'common.appName',
     'landing.otherLabelAlt',
+    'consent.titleAlt',
     'common.switchTo',
   ]);
 
@@ -79,6 +80,7 @@ test('hindi values are actually translated, not copied from english', () => {
 test('hindi values use devanagari script', () => {
   const latinOnly = enKeys.filter((key) => {
     if (key === 'common.appName' || key === 'landing.otherLabelAlt') return false;
+    if (key === 'consent.titleAlt') return false;
     if (key === 'common.switchTo') return false;
     return !/[\u0900-\u097F]/.test(valueAt(hi, key));
   });
