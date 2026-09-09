@@ -39,6 +39,12 @@ class Settings(BaseSettings):
     gemini_model: str = "gemini-flash-latest"
     ai_timeout_seconds: float = 8.0
 
+    # Optional second AI provider. When a key is present, Gemini failures are
+    # retried on Groq before giving up and serving verified fallback content.
+    groq_api_key: str = ""
+    # Groq production model: text-only, ~500 tokens/sec, json_object support.
+    groq_model: str = "openai/gpt-oss-120b"
+
     daily_ai_budget: int = 200
 
     allowed_origins: str = "http://localhost:3000"

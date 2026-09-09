@@ -28,14 +28,25 @@ _provider: Optional[AIProvider] = None
 
 
 def build_provider() -> AIProvider:
-    """Instantiated once per process, selected by AI_PROVIDER."""
+    """Instantiated once per process, selected by AI_PROVIDER.
+
+    With AI_PROVIDER=gemini and a GROQ_API_KEY present, the provider becomes a
+    failover chain: Gemini first, Groq on any Gemini failure, and only then
+    the pipeline's verified-content fallback.
+    """
     global _provider
     if _provider is None:
         settings = get_settings()
         if settings.ai_provider == "gemini":
             from app.services.ai.gemini import GeminiProvider
 
-            _provider = GeminiProvider()
+            provider: AIProvider = GeminiProvider()
+            if settings.groq_api_key:
+                from app.services.ai.failover import FailoverProvider
+                from app.services.ai.groq import GroqProvider
+
+                provider = FailoverProvider(provider, GroqProvider())
+            _provider = provider
         else:
             from app.services.ai.mock import MockAIProvider
 
