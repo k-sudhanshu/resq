@@ -3,12 +3,13 @@
 import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import AnalyzingScreen from '@/components/AnalyzingScreen';
+import ColdStartNotice from '@/components/layout/ColdStartNotice';
 import ErrorNotice from '@/components/ErrorNotice';
 import ImagePicker from '@/components/input/ImagePicker';
 import OptionButton from './OptionButton';
 import PatientContextPicker from './PatientContextPicker';
 import ProgressBar from './ProgressBar';
-import { createAnalysis, fetchCategory } from '@/lib/api';
+import { checkHealth, createAnalysis, fetchCategory } from '@/lib/api';
 import { useRouter } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import type { Answer, CategoryDetail, PatientContext } from '@/lib/types';
@@ -16,6 +17,22 @@ import type { Answer, CategoryDetail, PatientContext } from '@/lib/types';
 // Age bands do not apply: the person is a pregnant woman, and later
 // questions already ask how many months along she is.
 const SKIP_AGE_CATEGORIES = new Set(['pregnancy']);
+
+/** Placeholder mirroring the question layout, so loading doesn't jump. */
+function QuestionSkeleton() {
+  return (
+    <div aria-hidden className="flex animate-pulse flex-col gap-4">
+      <span className="h-2 w-full rounded bg-surface-container" />
+      <span className="h-4 w-24 rounded bg-surface-container" />
+      <span className="h-8 w-4/5 rounded bg-surface-container" />
+      <div className="flex flex-col gap-3">
+        <span className="h-14 rounded-lg bg-surface-container" />
+        <span className="h-14 rounded-lg bg-surface-container" />
+        <span className="h-14 rounded-lg bg-surface-container" />
+      </div>
+    </div>
+  );
+}
 
 /**
  * One question per screen. Answers are collected client-side and submitted in
@@ -31,6 +48,7 @@ export default function AssessScreen({ categoryKey }: { categoryKey: string }) {
   const [category, setCategory] = useState<CategoryDetail | null>(null);
   const [loadError, setLoadError] = useState<unknown>(null);
   const [attempt, setAttempt] = useState(0);
+  const [waking, setWaking] = useState(false);
 
   const [patient, setPatient] = useState<PatientContext | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -42,12 +60,26 @@ export default function AssessScreen({ categoryKey }: { categoryKey: string }) {
 
   useEffect(() => {
     let cancelled = false;
+    let settled = false;
+
+    // This is the first network request of the whole visit (the landing grid
+    // is static), so it may hit a sleeping free instance. Probe health in
+    // parallel: if the box is waking and the questions haven't arrived,
+    // explain the wait instead of leaving a silent skeleton.
+    checkHealth().then((awake) => {
+      if (!cancelled && !awake && !settled) setWaking(true);
+    });
+
     fetchCategory(categoryKey, locale)
       .then((detail) => {
         if (!cancelled) setCategory(detail);
       })
       .catch((error) => {
         if (!cancelled) setLoadError(error);
+      })
+      .finally(() => {
+        settled = true;
+        if (!cancelled) setWaking(false);
       });
     return () => {
       cancelled = true;
@@ -69,7 +101,13 @@ export default function AssessScreen({ categoryKey }: { categoryKey: string }) {
   }
 
   if (!category) {
-    return <p className="text-onSurface-variant">{common('loading')}</p>;
+    return (
+      <div className="flex flex-col gap-6" aria-busy>
+        {waking && <ColdStartNotice />}
+        <QuestionSkeleton />
+        <p className="sr-only">{common('loading')}</p>
+      </div>
+    );
   }
 
   if (submitting) {

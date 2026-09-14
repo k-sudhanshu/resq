@@ -3,7 +3,6 @@ import type {
   AnalysisRequestBody,
   AnalysisResult,
   ApiErrorCode,
-  Category,
   CategoryDetail,
 } from './types';
 import { clearToken, getToken, setToken } from './session';
@@ -73,10 +72,9 @@ export async function ensureSession(locale: string): Promise<string> {
   return body.token;
 }
 
-export function fetchCategories(locale: string): Promise<{ categories: Category[] }> {
-  return request(`/content/categories?lang=${locale}`);
-}
-
+// The category *list* is intentionally not fetched anywhere: the landing grid
+// renders from the static catalog (lib/categoryCatalog.ts). Only the detail
+// below is requested, when the user opens that category.
 export function fetchCategory(
   key: string,
   locale: string
